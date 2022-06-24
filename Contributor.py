@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 
 from Activity import Activity
-from Activity import Activity
 
 class Contributor(Activity, Activity):
     def __init__(self):
