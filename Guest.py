@@ -22,3 +22,4 @@ class Guest:
     def visualizeEvents(self, ):
         pass
 
+# Comentario de prueba para git
