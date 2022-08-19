@@ -33,14 +33,28 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 
 ```
 ## :red_circle: Practicas de Codigo Legible
-### **Comentar y Documentar**: <br>
+### :newspaper_roll: **Comentar y Documentar**: <br>
 Se documentara cada funcion y metodo que se use en el codigo, para poder ser entendido por cualquiera que revise el codigo. <br>
-### **Organizar las carpetas del proyecto**: <br>
-Separar lo que es el dominio, los controladores y repositorio.
-### **Identacion correspondiente**: <br>
-Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.<br>
-### **Evitar codigo redundante**: <br>
-No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo. <br>
-### **Usar un mismo lenguaje**: <br>
-Si vamos a programar con sentencias en español, para ser entendidas por cualquiera que revise el codigo, procurar hacerlo solo en ese idioma, excepto por palabras reservadas del lenguaje de programacion usado.<br>
+```
 
+```
+### :newspaper_roll: **Organizar las carpetas del proyecto**: <br>
+Separar lo que es el dominio, los controladores y repositorio.
+```
+
+```
+### :newspaper_roll: **Identacion correspondiente**: <br>
+Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.<br>
+```
+
+```
+### :newspaper_roll: **Evitar codigo redundante**: <br>
+No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo. <br>
+```
+
+```
+### :newspaper_roll: **Usar un mismo lenguaje**: <br>
+Si vamos a programar con sentencias en español, para ser entendidas por cualquiera que revise el codigo, procurar hacerlo solo en ese idioma, excepto por palabras reservadas del lenguaje de programacion usado.<br>
+```
+
+```
