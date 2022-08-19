@@ -36,7 +36,28 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 ### :newspaper_roll: **Comentar y Documentar**: <br>
 Se documentara cada funcion y metodo que se use en el codigo, para poder ser entendido por cualquiera que revise el codigo. <br>
 ```
+//Clase invitado
+class Invitado:
+    def __init__(self):
+        self.universidad = None
+        self.carreraProfesional = None
+        self.gradodeestudio = None
 
+    // funciones que tendra el invitado
+    def inscribirParticipacion(self, ):
+        pass
+
+    def confirmarParticipacion(self, ):
+        pass
+
+    def contactarOrganizacion(self, ):
+        pass
+
+    def buscarActividad(self, ):
+        pass
+
+    def visualizarEvento(self, ):
+        pass
 ```
 ### :newspaper_roll: **Organizar las carpetas del proyecto**: <br>
 Separar lo que es el dominio, los controladores y repositorio.
