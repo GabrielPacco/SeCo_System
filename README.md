@@ -13,6 +13,8 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 **CookBook**: <br>
 :crossed_swords: Problema más grande descompuesto en abstracciones de procedimiento.<br>
 :crossed_swords: Problema más grande resuelto como una secuencia de comandos, cada uno correspondiente a un procedimiento.<br>
+
+
 **Resful**: <br>
 REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:<br>
 :crossed_swords: Interactivo: extremo a extremo entre un agente activo (por ejemplo, una persona) y un backend.<br>
