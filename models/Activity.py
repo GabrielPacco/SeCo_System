@@ -11,3 +11,4 @@ class Activity:
         self.state = None
         self.meetinglink = None
 
+# aeaeaeae
