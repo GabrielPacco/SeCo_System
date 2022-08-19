@@ -13,6 +13,9 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 :crossed_swords: Problema más grande descompuesto en abstracciones de procedimiento.<br>
 :crossed_swords: Problema más grande resuelto como una secuencia de comandos, cada uno correspondiente a un procedimiento.<br>
 <br>
+```
+
+```
 **Resful**: <br>
 REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:<br>
 :crossed_swords: Interactivo: extremo a extremo entre un agente activo (por ejemplo, una persona) y un backend.<br>
@@ -23,3 +26,4 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 **lazy-rivers**: <br>
 :crossed_swords: Los datos llegan a las funciones en flujos, en lugar de como un todo completo a la vez<br>
 :crossed_swords: Las funciones son filtros/transformadores de un tipo de flujo de datos a otro<br>
+### Practicas de Codigo Legible
