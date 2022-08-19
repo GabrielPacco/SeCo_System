@@ -26,7 +26,7 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 ```
 
 ```
-###  **lazy-rivers**: <br>
+###  **Lazy-rivers**: <br>
 :crossed_swords: Los datos llegan a las funciones en flujos, en lugar de como un todo completo a la vez<br>
 :crossed_swords: Las funciones son filtros/transformadores de un tipo de flujo de datos a otro<br>
 ```
@@ -38,4 +38,9 @@ Se documentara cada funcion y metodo que se use en el codigo, para poder ser ent
 ### **Organizar las carpetas del proyecto**: <br>
 Separar lo que es el dominio, los controladores y repositorio.
 ### **Identacion correspondiente**: <br>
-Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.
+Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.<br>
+### **Evitar codigo redundante**: <br>
+No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo. <br>
+### **Usar un mismo lenguaje**: <br>
+Si vamos a programar con sentencias en español, para ser entendidas por cualquiera que revise el codigo, procurar hacerlo solo en ese idioma, excepto por palabras reservadas del lenguaje de programacion usado.<br>
+
