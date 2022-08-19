@@ -38,6 +38,7 @@ Se documentara cada funcion y metodo que se use en el codigo, para poder ser ent
 ```
 //Clase invitado
 class Invitado:
+    //Atributos de la clase invitado
     def __init__(self):
         self.universidad = None
         self.carreraProfesional = None
