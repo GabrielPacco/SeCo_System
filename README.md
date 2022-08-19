@@ -10,6 +10,6 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ### Diseño de Arquitectura
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png)
 ### Estilos de Programación
-CookBook
+**CookBook**: 
 Problema más grande descompuesto en abstracciones de procedimiento
 Problema más grande resuelto como una secuencia de comandos, cada uno correspondiente a un procedimiento
