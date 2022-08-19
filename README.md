@@ -68,7 +68,19 @@ Separar lo que es el dominio, los controladores y repositorio.
 ### :newspaper_roll: **Identacion correspondiente**: <br>
 Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.<br>
 ```
-
+// clase usuario
+class Usuario:
+    //Atributos de la clase usuario
+    def __init__(self):
+        self.id = None
+        self.nombre = None
+        self.usuario = None
+        self.contrasenha = None
+        self.email = None
+        self.telefono = None
+    //funcion inicial 
+    def iniciarSesion(self, ):
+        pass
 ```
 ### :newspaper_roll: **Evitar codigo redundante**: <br>
 No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo. <br>
