@@ -33,3 +33,9 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 
 ```
 ## :red_circle: Practicas de Codigo Legible
+**Comentar y Documentar**: <br>
+Se documentara cada funcion y metodo que se use en el codigo, para poder ser entendido por cualquiera que revise el codigo. <br>
+**Organizar las carpetas del proyecto**: <br>
+Separar lo que es el dominio, los controladores y repositorio.
+**Identacion correspondiente**: <br>
+Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.
