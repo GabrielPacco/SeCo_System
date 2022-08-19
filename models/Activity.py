@@ -12,3 +12,4 @@ class Activity:
         self.meetinglink = None
 
 # aeaeaeae
+# Requisito tener Git 
