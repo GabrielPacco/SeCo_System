@@ -23,7 +23,13 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 :crossed_swords: Sin estado, como en cliente--servidor sin estado: cada solicitud del cliente al servidor debe contener toda la información necesaria para que el servidor atienda la solicitud. El servidor no puede almacenar el contexto de la interacción. El estado de la sesión está en el cliente.<br>
 :crossed_swords: Interfaz uniforme: recursos que se crean y recuperan, identificadores de recursos y representación hipermedia que es el motor del estado de la aplicación<br>
 <br>
+```
+
+```
 **lazy-rivers**: <br>
 :crossed_swords: Los datos llegan a las funciones en flujos, en lugar de como un todo completo a la vez<br>
 :crossed_swords: Las funciones son filtros/transformadores de un tipo de flujo de datos a otro<br>
-### Practicas de Codigo Legible
+```
+
+```
+## :red_circle: Practicas de Codigo Legible
