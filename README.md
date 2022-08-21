@@ -62,9 +62,9 @@ class Invitado:
 ```
 ### :newspaper_roll: **Organizar las carpetas del proyecto**: <br>
 Separar lo que es el dominio, los controladores y repositorio.
-```
+
 ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
-```
+
 ### :newspaper_roll: **Identacion correspondiente**: <br>
 Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.<br>
 ```
