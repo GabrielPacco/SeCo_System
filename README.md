@@ -114,3 +114,18 @@ CREATE TABLE actividad
     enlace_reu TEXT
 );
 ```
+### :newspaper_roll: **Una funcion, una tarea**: <br>
+Al momento de declarar las funciones, estas solo deben de realizar una tarea en especifico, para no tener problemas si es que esque se modifica la funcion y pueda afectar a las demas.
+```
+# Funcion para obtener todas las actividades
+def get_actividads(self):  
+    ...
+return data
+
+# Funcion para agregar una actividad
+def add_actividad(self, nombre, descripcion,
+    fechaInicio, fechaFin, enlaceReunion, isProtocolar,
+    isPonencia, isPanel, isConcurso, bases):
+    ...    
+return data
+```
