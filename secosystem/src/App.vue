@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="El Diko es un Weonazo ga ga aea aea"/>
+  <HelloWorld msg="GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
 </template>
 
 <script>
