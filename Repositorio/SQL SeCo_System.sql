@@ -3,12 +3,10 @@ USE  BBDDSECOSISTEM;
 
 CREATE TABLE  usuario
 (
-	id_user INT PRIMARY KEY ,
+    id_user INT PRIMARY KEY ,
     nombre VARCHAR(50),
-    usuario VARCHAR(50),
     contrasenia VARCHAR(50),
-    email VARCHAR(50),
-    telefono INT
+    email VARCHAR(50)
 );
 
 CREATE TABLE invitado
@@ -44,6 +42,7 @@ CREATE TABLE actividad
 (
     id_act INT PRIMARY KEY,
     nombre VARCHAR(30),
+    descripcion TEXT,
     fecha DATE,
     hora_inicio TIME,
     hora_fin TIME,
