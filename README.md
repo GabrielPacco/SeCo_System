@@ -162,3 +162,5 @@ def add_actividad(self, nombre, descripcion,
     ...    
 return data
 ```
+
+## :red_circle: Principios SOLID
