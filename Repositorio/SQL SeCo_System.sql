@@ -44,6 +44,7 @@ CREATE TABLE actividad
 (
     id_act INT PRIMARY KEY,
     nombre VARCHAR(30),
+    descripcion TEXT,
     fecha DATE,
     hora_inicio TIME,
     hora_fin TIME,
