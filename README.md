@@ -129,4 +129,4 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     ```
 6. Organización de Archivos y Carpetas.
 
-    ![image]https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg
+    ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
