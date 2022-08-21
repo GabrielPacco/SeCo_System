@@ -165,7 +165,7 @@ return data
 
 ## :red_circle: Principios SOLID
 
-### :gem: **[^1]**: <br> 
-### :gem: **2**: <br>
-### :gem: **3**: <br>
+### :gem: **_1_**: <br> 
+### :gem: **_2_***: <br>
+### :gem: **_3_***: <br>
 
