@@ -12,9 +12,20 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ### **CookBook**: <br>
 :crossed_swords: Problema más grande descompuesto en abstracciones de procedimiento.<br>
 :crossed_swords: Problema más grande resuelto como una secuencia de comandos, cada uno correspondiente a un procedimiento.<br>
+:crossed_swords: Al terminar un registoro correcto, el redireccionamiento no necesita de entradas ni salidas,por lo que una simple secuencia de procedimientos para notificar al usuario y redireccionarlo a una pagina en cuestion<br>
 <br>
 ```
-
+################# Usuario ################################
+@task_blueprint.route('/usuario/add_usuario', methods=['POST'])
+@cross_origin()
+def create_user():
+    content = model.add_usuario(request.json['nombre'], request.json['apellido'], request.json['contrasenia'], request.json['email']) 
+    return jsonify(content)
+################# Invitado ################################
+@task_blueprint.route('/invitado/delete_invitado', methods=['POST'])
+@cross_origin()
+def delete_invitado():
+    return jsonify(model.delete_invitado(int(request.json['id_invitado'])))
 ```
 ### **Resful**: <br>
 REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:<br>
@@ -24,6 +35,10 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 :crossed_swords: Interfaz uniforme: recursos que se crean y recuperan, identificadores de recursos y representación hipermedia que es el motor del estado de la aplicación<br>
 <br>
 ```
+################# Carpetas separadas del Cliente y Servidor ################################
+
+Donde el controlador del proyecto se encuentra en la carpe Backend SeCo System
+Parte de las vistas en secosystem/srs/views
 
 ```
 ###  **Lazy-rivers**: <br>
