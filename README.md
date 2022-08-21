@@ -90,5 +90,27 @@ No declarar variables o comentarios que son obvios o que pueda sobrecargar el co
 ### :newspaper_roll: **Usar un mismo lenguaje**: <br>
 Si vamos a programar con sentencias en español, para ser entendidas por cualquiera que revise el codigo, procurar hacerlo solo en ese idioma, excepto por palabras reservadas del lenguaje de programacion usado.<br>
 ```
-
+CREATE TABLE contribuidor
+(
+	id_cont INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    universidad  VARCHAR(50),
+    especialidad VARCHAR(50),
+    descripcion TEXT,
+    facebool VARCHAR(50),
+    email VARCHAR(50),
+    linkedin VARCHAR(50),
+    rol VARCHAR(20)
+);
+CREATE TABLE actividad
+(
+    id_act INT PRIMARY KEY,
+    nombre VARCHAR(30),
+    descripcion TEXT,
+    fecha DATE,
+    hora_inicio TIME,
+    hora_fin TIME,
+    estado VARCHAR(30),
+    enlace_reu TEXT
+);
 ```
