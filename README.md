@@ -41,11 +41,29 @@ Donde el controlador del proyecto se encuentra en la carpe Backend SeCo System
 Parte de las vistas en secosystem/srs/views
 
 ```
-###  **Lazy-rivers**: <br>
-:crossed_swords: Los datos llegan a las funciones en flujos, en lugar de como un todo completo a la vez<br>
-:crossed_swords: Las funciones son filtros/transformadores de un tipo de flujo de datos a otro<br>
+###  **Thinks**: <br>
+:crossed_swords: El problema más grande se descompone en 'cosas' que tienen sentido para el dominio del problema.<br>
+:crossed_swords: Cada 'cosa' es una cápsula de datos que expone los procedimientos al resto del mundo.<br>
+:crossed_swords:Nunca se accede a los datos directamente, solo a través de estos procedimientos.<br>
 ```
-
+##Estilo de programacion orientado a Objetos para el uso de atributos y funciones.<br>
+##Clase Usuario
+class Usuario:
+    #Atributos
+    def __init__(self):
+        self.id = None
+        self.nombre = None
+        self.usuario = None
+        self.contrasenha = None
+        self.email = None
+        self.telefono = None
+##Clase Invitado
+class Invitado:
+    #Atributos
+    def __init__(self):
+        self.universidad = None
+        self.carreraProfesional = None
+        self.gradodeestudio = None
 ```
 ## :red_circle: Practicas de Codigo Legible
 ### :newspaper_roll: **Comentar y Documentar**: <br>
