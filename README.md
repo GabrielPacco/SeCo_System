@@ -170,8 +170,10 @@ return data
 -Si una clase tiene muchas responsabilidades, aumenta la posibilidad de errores porque hacer cambios en una de sus responsabilidades podría afectar a las otras sin que lo sepas.
 ```
 ```
-### :gem: **_2:_ Principio de Segregación de la interfaz **: <br>
--Cuando se requiere que una Clase realice acciones que no son útiles, es un desperdicio y puede producir errores inesperados si la Clase no tiene la capacidad de realizar esas acciones.
+### :gem: **_2:_ Principio de Segregación de la interfaz**: <br>
+-Cuando se requiere que una Clase realice acciones que no son útiles, es un desperdicio y puede producir errores inesperados si la Clase no tiene la capacidad de realizar esas acciones.<br>
+-Muchas interfaces específicas son mejores que una única más general.<br>
+-Consiste en encapsular las funciones de las clases que requieren hacer consultas en la base de datos sobre información que será mostrada al usuario. Esto se realiza mediante getters en cada clases.
 
 ```
 ```
