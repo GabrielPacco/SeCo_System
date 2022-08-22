@@ -165,7 +165,7 @@ return data
 
 ## :red_circle: Principios SOLID
 
-### :gem: **_1_**: <br> 
-### :gem: **_2_**: <br>
-### :gem: **_3_**: <br>
+### :gem: **_1:_ Principio de responsabilidad única (PRS)**: <br> 
+### :gem: **_2:_ **: <br>
+### :gem: **_3:_ **: <br>
 
