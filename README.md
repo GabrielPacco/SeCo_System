@@ -13,43 +13,42 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 
 # **Estilos de Programación**
 
-1. Declared-Intentions.
+## 1. Declared-Intentions.
 
-    ### Restricciones 
-    - **a)** *Existencia de un verificador de tipos en tiempo de ejecución.* 
-    - **b)** *Los procedimientos y funciones declaran qué tipos de argumentos esperan.* 
-    - **c)** *Si las personas que llaman envían argumentos de tipos que no se esperan, los procedimientos/funciones no se ejecutan.*
-    
-    
+### Restricciones 
+- **a)** *Existencia de un verificador de tipos en tiempo de ejecución.* 
+- **b)** *Los procedimientos y funciones declaran qué tipos de argumentos esperan.* 
+- **c)** *Si las personas que llaman envían argumentos de tipos que no se esperan, los procedimientos/funciones no se ejecutan.*
+
+
     El problema de la verificación de tipos es un problema resuelto en los lenguajes tipificados estáticamente, por lo que al programar en F# no hay casi nada que debamos hacer realmente para este estilo.
 
     Usando la misma solución del estilo Pipeline (también conocido como funcional), agregué algunas declaraciones de tipo explícitas para cumplir mejor con las restricciones.
 
     ``` 
 
-
     ```
 
-2. Plugins.
+## 2. Plugins.
 
-    ### Restricciones 
+### *Restricciones* 
 
-    - **a)** *El problema se descompone utilizando alguna forma de abstracción (procedimientos, funciones, objetos, etc.)*
-    - **b)** *Todas o algunas de esas abstracciones se encapsulan físicamente en sus propios paquetes, generalmente precompilados. El programa principal y cada uno de los paquetes se compilan de forma independiente. Estos paquetes son cargados dinámicamente por el programa principal, generalmente al principio (pero no necesariamente).*
-    - **c)** *El programa principal usa funciones/objetos de los paquetes cargados dinámicamente, sin saber qué implementaciones exactas se usarán. Se pueden usar nuevas implementaciones sin tener que adaptar o recompilar el programa principal.*
-    - **d)** *Especificación externa de qué paquetes cargar. Esto se puede hacer mediante un archivo de configuración, convenciones de ruta, entrada de usuario u otros mecanismos para que la especificación externa del código se vincule en tiempo de ejecución.*
+- **a)** *El problema se descompone utilizando alguna forma de abstracción (procedimientos, funciones, objetos, etc.)*
+- **b)** *Todas o algunas de esas abstracciones se encapsulan físicamente en sus propios paquetes, generalmente precompilados. El programa principal y cada uno de los paquetes se compilan de forma independiente. Estos paquetes son cargados dinámicamente por el programa principal, generalmente al principio (pero no necesariamente).*
+- **c)** *El programa principal usa funciones/objetos de los paquetes cargados dinámicamente, sin saber qué implementaciones exactas se usarán. Se pueden usar nuevas implementaciones sin tener que adaptar o recompilar el programa principal.*
+- **d)** *Especificación externa de qué paquetes cargar. Esto se puede hacer mediante un archivo de configuración, convenciones de ruta, entrada de usuario u otros mecanismos para que la especificación externa del código se vincule en tiempo de ejecución.*
 
 
     ``` 
 
 
     ```
-3. Dataspaces.
+## 3. Dataspaces.
 
-    ### Restricciones 
-    - **a)** *Existencia de una o más unidades que ejecutan concurrentemente.* 
-    - **b)** *Existencia de uno o más espacios de datos donde las unidades concurrentes almacenan y recuperan datos.* 
-    - **c)** *No hay intercambios de datos directos entre las unidades concurrentes, excepto a través de los espacios de datos.*
+### *Restricciones*
+- **a)** *Existencia de una o más unidades que ejecutan concurrentemente.* 
+- **b)** *Existencia de uno o más espacios de datos donde las unidades concurrentes almacenan y recuperan datos.* 
+- **c)** *No hay intercambios de datos directos entre las unidades concurrentes, excepto a través de los espacios de datos.*
 
     ```
 
@@ -58,7 +57,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 
 # **Prácticas de Código Legible**
 
-1. Agrupación de código. \
+## *1. Agrupación de código.*
     La mayoría de las veces, ciertas tareas requieren unas pocas líneas de código. Es una buena idea mantener estas tareas dentro de bloques de código separados, con algunos espacios entre ellos.
     ``` 
     ################### Actividad ################################
@@ -88,7 +87,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
             content = {}
         return data
     ```
-2. Se Utilizo el mismo vocabulario para el mismo tipo de variable
+## *2. Se Utilizo el mismo vocabulario para el mismo tipo de variable*
     ``` {js}
     get_Actividad();
     get_Adminstrador();
@@ -100,7 +99,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     add_Concurso();
     add_Edicion();
     ```
-3. Poner en mayúscula las palabras especiales de SQL
+## *3. Poner en mayúscula las palabras especiales de SQL*
     ```{js}
     CREATE TABLE  usuario
     (
@@ -123,7 +122,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
         FOREIGN KEY (id_user) REFERENCES usuario (id_user)
     );
     ```
-4. Cada función realiza solo realiza una tarea
+## *4. Cada función realiza solo realiza una tarea*
     ```{js}
     # Funcion para obtener una actividad por su ID
     def get_actividad(self, ID_Actividad):    
@@ -147,7 +146,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
         ...
     return data
     ```
-5. Los nombres de las funciones realizan lo mencionado
+## *5. Los nombres de las funciones realizan lo mencionado*
     ``` {js}
     @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
     @cross_origin()
@@ -170,9 +169,9 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     def tasks():
         return jsonify(model.get_actividads())
     ```
-6. Organización de Archivos y Carpetas.
+## *6. Organización de Archivos y Carpetas.*
 
-    ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
+![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
 
 # **Principios SOLID**
 ## *1) El principio de responsabilidad única (SRP)*
@@ -187,13 +186,46 @@ Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2,
 
 
 ``` 
+class MySQLPool(object):
+    
+    def __init__(self):             
+        self.pool = self.create_pool(pool_name='task_pool', pool_size=3)
 
+    def create_pool(self, pool_name, pool_size):
+        pool = mysql.connector.pooling.MySQLConnectionPool(
+            pool_name=pool_name,
+            pool_size=pool_size,
+            pool_reset_session=True,
+            **dbconfig)
+        return pool
+
+    def close(self, conn, cursor):
+
+        cursor.close()
+        conn.close()
+
+    def execute(self, sql, args=None, commit=False):
+        # get connection form connection pool instead of create one.
+        conn = self.pool.get_connection()
+        cursor = conn.cursor()
+        if args:
+            cursor.execute(sql, args)
+        else:
+            cursor.execute(sql)
+        if commit is True:
+            conn.commit()
+            self.close(conn, cursor)
+            return cursor
+        else:
+            res = cursor.fetchall()
+            self.close(conn, cursor)
+            return res
 ```
 
 
 ## *2) El principio abierto-cerrado (OCP)*
 
-### *“ Las entidades de software… deben estar abiertas a la extensión pero cerradas a la modificación”*
+### *“Las entidades de software… deben estar abiertas a la extensión pero cerradas a la modificación”*
 
 En otras palabras:No debería necesitar modificar el código que ya ha escrito para acomodar la nueva funcionalidad, simplemente agregue lo que necesita ahora.
 
@@ -205,9 +237,9 @@ Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. S
 
 ```
 
-## *4) El Principio de Segregación de Interfaz (ISP)*
+## *3) El Principio de Segregación de Interfaz (ISP)*
 
-### *“ Muchas interfaces específicas del cliente son mejores que una interfaz de propósito general ”*
+### *“Muchas interfaces específicas del cliente son mejores que una interfaz de propósito general”*
 
 En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
 
