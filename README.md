@@ -173,3 +173,48 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 6. Organización de Archivos y Carpetas.
 
     ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
+
+# **Principios SOLID**
+## *1) El principio de responsabilidad única (SRP)*
+
+### *“Una clase debe tener una, y sólo una, razón para cambiar”*
+
+En otras palabras, cada componente de su código (en general una clase, pero también una función) debe tener una y solo una responsabilidad . Como consecuencia de eso, solo debería haber una razón para cambiarlo.
+
+Con demasiada frecuencia, ve una pieza de código que se encarga de todo un proceso a la vez. Es decir, una función que carga datos, los modifica y los grafica, todo antes de devolver su resultado.
+
+Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2, …, nx] y calculamos algunas funciones matemáticas para esta lista. Por ejemplo, calcule la media, la mediana, etc.
+
+
+``` 
+
+```
+
+
+## *2) El principio abierto-cerrado (OCP)*
+
+### *“ Las entidades de software… deben estar abiertas a la extensión pero cerradas a la modificación”*
+
+En otras palabras:No debería necesitar modificar el código que ya ha escrito para acomodar la nueva funcionalidad, simplemente agregue lo que necesita ahora.
+
+Esto no significa que no pueda cambiar su código cuando las premisas del código necesiten ser modificadas, sino que si necesita agregar nuevas funciones similares a la presente, no debería necesitar cambiar otras partes del código.
+
+Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. Si quisiéramos agregar una nueva funcionalidad, por ejemplo, calcular la mediana, deberíamos haber creado una nueva función de método y agregar su invocación a "principal". Eso habría agregado una extensión pero también modificado el principal.
+
+``` 
+
+```
+
+## *4) El Principio de Segregación de Interfaz (ISP)*
+
+### *“ Muchas interfaces específicas del cliente son mejores que una interfaz de propósito general ”*
+
+En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
+
+En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
+
+Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita.
+
+``` 
+
+```
