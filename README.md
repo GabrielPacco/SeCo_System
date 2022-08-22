@@ -166,10 +166,19 @@ return data
 ## :red_circle: Principios SOLID
 
 ### :gem: **_1:_ Principio de responsabilidad única (PRS)**: <br> 
--Este primer principio dice que “una clase debe tener una sola razón para cambiar”, es decir, debe tener una sola responsabilidad. 
+-Este primer principio dice que “una clase debe tener una sola razón para cambiar”, es decir, debe tener una sola responsabilidad.  <br> 
 -Si una clase tiene muchas responsabilidades, aumenta la posibilidad de errores porque hacer cambios en una de sus responsabilidades podría afectar a las otras sin que lo sepas.
 ```
 ```
-### :gem: **_2:_ **: <br>
-### :gem: **_3:_ **: <br>
+### :gem: **_2:_ Principio de Segregación de la interfaz **: <br>
+-Cuando se requiere que una Clase realice acciones que no son útiles, es un desperdicio y puede producir errores inesperados si la Clase no tiene la capacidad de realizar esas acciones.
+
+```
+```
+### :gem: **_3:_ Principio de abierto y cerrado**: <br>
+-Las clases deben estar abiertas para extensión, pero cerradas para modificación. <br>
+-Cambiar el comportamiento actual de una Clase afectará a todos los sistemas que utilizan esa Clase. <br>
+-Si desea que la Clase realice más funciones, el enfoque ideal es agregar a las funciones que ya existen NO cambiarlas. <br>
+```
+```
 
