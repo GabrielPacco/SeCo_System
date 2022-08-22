@@ -166,6 +166,10 @@ return data
 ## :red_circle: Principios SOLID
 
 ### :gem: **_1:_ Principio de responsabilidad única (PRS)**: <br> 
+-Este primer principio dice que “una clase debe tener una sola razón para cambiar”, es decir, debe tener una sola responsabilidad. 
+-Si una clase tiene muchas responsabilidades, aumenta la posibilidad de errores porque hacer cambios en una de sus responsabilidades podría afectar a las otras sin que lo sepas.
+```
+```
 ### :gem: **_2:_ **: <br>
 ### :gem: **_3:_ **: <br>
 
