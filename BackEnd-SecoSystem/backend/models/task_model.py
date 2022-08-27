@@ -109,7 +109,7 @@ class TaskModel:
 ################### Invitado ################################
 
     # Funcion para obtener un invitado por su ID
-    def get_invitado(self, id_inv):
+    def get_administrador(self, id_inv):
         params = {'id_inv' : id_inv}      
         rv = self.mysql_pool.execute("SELECT * from invitado where id_inv=%(id_inv)s", params)                
         data = []
@@ -121,7 +121,7 @@ class TaskModel:
         return data
     
     # Funcion para obtener todos los invitados
-    def get_invitados(self):
+    def get_administradors(self):
         rv = self.mysql_pool.execute("SELECT * from invitado")  
         data = []
         content = {}
@@ -151,6 +151,51 @@ class TaskModel:
         query = """delete from invitado where id_inv = %(id_inv)s"""    
         self.mysql_pool.execute(query, params, commit=True)   
 
+        data = {'result': 1}
+        return data
+################### Administrador ################################
+
+    # Funcion para obtener un invitado por su ID
+    def get_administrador(self, id_adm):
+        params = {'id_adm' : id_adm}      
+        rv = self.mysql_pool.execute("SELECT * from administrador where id_inv=%(id_adm)s", params)                
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_adm': result[0], 'rol': result[1]}
+            data.append(content)
+            content = {}
+        return data
+    
+    # Funcion para obtener todos los invitados
+    def get_administradors(self):
+        rv = self.mysql_pool.execute("SELECT * from administrador")  
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_adm': result[0], 'rol': result[1]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para agregar un invitado
+    def add_invitado(self, rol):
+        params = {
+            'rol' : rol
+            
+        }  
+        query = """insert into administrador (rol)
+            values (%(rol)s)"""    
+        cursor = self.mysql_pool.execute(query, params, commit=True)   
+
+        data = {'id_adm': cursor.lastrowid, 'rol': rol}
+        return data
+
+    # Funcion para eliminar un invitado
+    def delete_invitado(self, id_adm):
+        params = {'id_adm' : id_adm}      
+        query = """delete from administrador where id_inv = %(id_adm)s"""    
+        self.mysql_pool.execute(query, params, commit=True)   
         data = {'result': 1}
         return data
 
