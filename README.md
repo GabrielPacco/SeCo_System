@@ -269,3 +269,12 @@ Este problema surge, principalmente, cuando una subclase hereda métodos de una 
 ``` 
 
 ```
+### 🔩COLABORADORES 🔩
+
+- [x] Erick Jesús Perez Chipa
+- [x] Gabriel Pacco Huaraca
+- [x] Ronald Gutierrez Arratia
+- [x] Uberto Garcia Caceres
+- [x] Fabrizio Miguel Mattos Cahui
+- [x] Albert Daniel Llica Alvarez
+- [x] Diego Josue Aquino Quispe
