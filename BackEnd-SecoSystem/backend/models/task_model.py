@@ -12,7 +12,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'ID_Actividad': result[0], 'nombre': result[1], 'descripcion': result[2], 'fechaInicio': result[3], 'fechaFin': result[4], 'enlaceReunion': result[5], 'isProtocolar': result[6], 'isPonencia': result[7], 'isPanel': result[8], 'isConcurso': result[9], 'bases': result[10]}
+            content = {'ID_Actividad': result[0], 'nombre': result[1], 'descripcion': result[2], 'fecha': result[3], 'hora_inicio': result[4], 'hora_fin': result[5], 'estado': result[6], 'enlace_reu': result[7]}
             data.append(content)
             content = {}
         return data
@@ -23,30 +23,29 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'ID_Actividad': result[0], 'nombre': result[1], 'descripcion': result[2], 'fechaInicio': result[3], 'fechaFin': result[4], 'enlaceReunion': result[5], 'isProtocolar': result[6], 'isPonencia': result[7], 'isPanel': result[8], 'isConcurso': result[9], 'bases': result[10]}
+            content = {'ID_Actividad': result[0], 'nombre': result[1], 'descripcion': result[2], 'fecha': result[3], 'hora_inicio': result[4], 'hora_fin': result[5], 'estado': result[6], 'enlace_reu': result[7]}
             data.append(content)
             content = {}
         return data
 
     # Funcion para agregar una actividad
-    def add_actividad(self, nombre, descripcion, fechaInicio, fechaFin, enlaceReunion, isProtocolar, isPonencia, isPanel, isConcurso, bases):
+    def add_actividad(self, nombre, descripcion, fecha, hora_inicio, hora_fin, estado, enlace_reu):
         params = {
             'nombre' : nombre,
             'descripcion' : descripcion,
-            'fechaInicio' : fechaInicio,
-            'fechaFin' : fechaFin,
-            'enlaceReunion' : enlaceReunion,
-            'isProtocolar' : isProtocolar,
-            'isPonencia' : isPonencia,
-            'isPanel' : isPanel,
-            'isConcurso' : isConcurso,
-            'bases' : bases
+            'fecha' : fecha,
+            'hora_inicio' : hora_inicio,
+            'hora_fin' : hora_fin,
+            'estado' : estado,
+            'enlace_reu' : enlace_reu
         }  
         query = """insert into actividad (nombre, descripcion, fechaInicio, fechaFin, enlaceReunion, isProtocolar, isPonencia, isPanel, isConcurso, bases)
             values (%(nombre)s, %(descripcion)s, %(fechaInicio)s, %(fechaFin)s, %(enlaceReunion)s, %(isProtocolar)s, %(isPonencia)s, %(isPanel)s, %(isConcurso)s, %(bases)s)"""    
         cursor = self.mysql_pool.execute(query, params, commit=True)   
 
-        data = {'ID_Actividad': cursor.lastrowid, 'nombre': nombre, 'descripcion': descripcion, 'fechaInicio': fechaInicio, 'fechaFin': fechaFin, 'enlaceReunion': enlaceReunion, 'isProtocolar': isProtocolar, 'isPonencia': isPonencia, 'isPanel': isPanel, 'isConcurso': isConcurso, 'bases': bases}
+        data = {'ID_Actividad': cursor.lastrowid, 'nombre': nombre, 'descripcion': descripcion, 
+        'fecha': fecha, 'hora_inicio': hora_inicio, 'hora_fin': hora_fin,
+         'estado': estado, 'enlace_reu': enlace_reu}
         return data
 
     # Funcion para eliminar una actividad
