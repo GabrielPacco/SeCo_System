@@ -22,7 +22,8 @@ CREATE TABLE invitado
 CREATE TABLE administrador
 (
 	id_adm INT,
-    id_user INT,
+	id_user INT,
+	rol VARCHAR(100),
     PRIMARY KEY (id_user,id_adm),
     FOREIGN KEY (id_user) REFERENCES usuario (id_user)
 );
