@@ -14,9 +14,9 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 :scroll: Visualizar programa: El usuario debe visualizar el calendario de actividades. Se muestra el cronograma de actividades, cada actividad tendrá un nombre, su expositor y la hora. <br>
 :scroll: Visualizar actividad (track): El usuario debe visualizar las actividades programadas. Se muestra el cronograma e información de las actividades.
 :scroll: Buscar actividad: El usuario podrá realizar búsquedas a través de filtros. <br>
-:scroll: Contactar organización: El usuario podrá visualizar información de contacto y podrá enviar mensaje a los organizadores.
+:scroll: Contactar organización: El usuario podrá visualizar información de contacto y podrá enviar mensaje a los organizadores. <br>
 :scroll: Gestionar cuenta: El administrador podrá dirigir las cuentas de los usuarios. <br>
-:scroll: Gestionar actividad (track): El administrador puede gestionar una actividad, esto incluye programar una nueva actividad, modificarla o finalizarla.
+:scroll: Gestionar actividad (track): El administrador puede gestionar una actividad, esto incluye programar una nueva actividad, modificarla o finalizarla. <br>
 :scroll: Añadir actividad: El administrador debe ser capaz de añadir actividades a un evento en la página. <br>
 :scroll: Eliminar actividad: El administrador puede eliminar una actividad de un evento. El evento seleccionado se desecha del calendario. <br>
 :scroll: Modificar Actividad: El administrador puede modificar una actividad, pudiendo editar sus datos y actualizarlos en el calendario. <br>
