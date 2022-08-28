@@ -155,7 +155,28 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
     add_Concurso();
     add_Edicion();
     ```
-## *3. Poner en mayúscula las palabras especiales de SQL*
+## *3. Identacion correspondiente* <br>
+Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.
+```
+<template>
+  <v-app id="inspire">
+    <v-content>
+
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="12" sm="8" md="8">
+            <v-card class="elevation-12" fab color="#ccffff" outline>
+              <v-window v-model="step" >
+                <v-window-item :value="1">
+                  <v-row>
+                    <v-col cols="12" md="8">
+                      <!--<img src="src/assets/logo.png" height="50px" width="550px"/> -->
+                      <v-card-text class="mt-12">
+                        <h1
+                          class="text-center display-5 teal--blue text--blue" 
+                        >Iniciar sesión en SeCo_System</h1>
+```
+## *4. Poner en mayúscula las palabras especiales de SQL*
     ```{js}
     CREATE TABLE  usuario
     (
@@ -178,7 +199,7 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
         FOREIGN KEY (id_user) REFERENCES usuario (id_user)
     );
     ```
-## *4. Cada función realiza solo realiza una tarea*
+## *5. Cada función realiza solo realiza una tarea*
     ```{js}
     # Funcion para obtener una actividad por su ID
     def get_actividad(self, ID_Actividad):    
@@ -202,7 +223,7 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
         ...
     return data
     ```
-## *5. Los nombres de las funciones realizan lo mencionado*
+## *6. Los nombres de las funciones realizan lo mencionado*
     ``` {js}
     @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
     @cross_origin()
@@ -225,7 +246,7 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
     def tasks():
         return jsonify(model.get_actividads())
     ```
-## *6. Organización de Archivos y Carpetas.*
+## *7. Organización de Archivos y Carpetas.*
 
 ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
 
