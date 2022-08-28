@@ -7,9 +7,10 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png) 
 <img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png" width="450" height="450">
 ### Diseño de Modelo de Datos 
-![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png)
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png" width="500" height="500">
 ### Diseño de Arquitectura
-![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png)
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png" width="500" height="500">
+
 
 # **Estilos de Programación**
 
