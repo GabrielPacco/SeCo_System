@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-
+#conero de M
 import Ponencia, Panel, Concurso, Protocolar
 class Actividad:
     def __init__(self,id_1,nom_1,fec_1,hoI_1,hoF_1,est_1,enl_1,pon_1,pan_top,con_bas,con_pre):
