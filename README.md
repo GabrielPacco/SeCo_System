@@ -7,6 +7,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ### Funcionalidades
 
 
+
 ### Diagrama de Casos de Uso
 
 <img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/diagrama_casos.png" width="550" height="550">
@@ -279,6 +280,9 @@ Este problema surge, principalmente, cuando una subclase hereda métodos de una 
 ``` 
 
 ```
+### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
+https://trello.com/b/FxYv1sZo/seco
+
 ### 🔩COLABORADORES 🔩
 
 - [x] Erick Jesús Perez Chipa
