@@ -98,7 +98,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
  ## 4. Resful.
 REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:
 ### *Restricciones*
-- **a)** * Interactivo: extremo a extremo entre un agente activo (por ejemplo, una persona) y un backend.* 
+- **a)** *Interactivo: extremo a extremo entre un agente activo (por ejemplo, una persona) y un backend.* 
 - **b)** *Separación entre Cliente (interfaz de usuario) y Servidor (almacenamiento de datos).* 
 - **c)** *Sin estado, como en cliente--servidor sin estado: cada solicitud del cliente al servidor debe contener toda la información necesaria para que el servidor atienda la solicitud. El servidor no puede almacenar el contexto de la interacción. El estado de la sesión está en el cliente.*
 - **d)** Interfaz uniforme: recursos que se crean y recuperan, identificadores de recursos y representación hipermedia que es el motor del estado de la aplicación*
