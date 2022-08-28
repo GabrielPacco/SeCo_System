@@ -9,7 +9,6 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png)
 ### Diseño de Arquitectura
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png)
-![image](https://drive.google.com/drive/u/3/folders/1FTkcpkVgAEgWcoMfaIJk_cD5nqsF0EoC)
 
 # **Estilos de Programación**
 
