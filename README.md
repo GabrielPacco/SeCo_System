@@ -250,6 +250,9 @@ Identar cada linea de codigo, o darle la sangria correspondiente, para tener un 
 
 ![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
 
+## *8. Evitar codigo redundante.* <br>
+
+No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo.
 # **Principios SOLID**
 ## *1) El principio de responsabilidad única (SRP)*
 
