@@ -5,7 +5,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ## :red_circle: Desarrollo
 ### Diagrama de Casos de Uso
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png) 
-<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png" width="324" height="324">
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png" width="450" height="450">
 ### Diseño de Modelo de Datos 
 ![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png)
 ### Diseño de Arquitectura
