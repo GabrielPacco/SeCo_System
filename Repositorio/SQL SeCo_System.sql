@@ -1,14 +1,5 @@
 CREATE DATABASE BBDDSECOSISTEM;
 USE  BBDDSECOSISTEM;
-Create table USUARIO
-(
-    id_user INT,
-    nombre VARCHAR(50),
-    contrasenia VARCHAR(50),
-    email VARCHAR(50),
-    PRIMARY KEY (id_user),
-);
-
 
 CREATE TABLE  usuario
 (
@@ -57,7 +48,7 @@ CREATE TABLE actividad
     descripcion TEXT,
     fecha DATE,
     hora_inicio TIME,
-    hora_fin TIME,
+    hora_fin VARCHAR(20),
     estado VARCHAR(30),
     enlace_reu TEXT,
     PRIMARY KEY (id_act)
