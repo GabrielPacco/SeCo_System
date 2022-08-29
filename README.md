@@ -83,33 +83,31 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **c)** *El programa principal usa funciones/objetos de los paquetes cargados dinámicamente, sin saber qué implementaciones exactas se usarán. Se pueden usar nuevas implementaciones sin tener que adaptar o recompilar el programa principal.*
 - **d)** *Especificación externa de qué paquetes cargar. Esto se puede hacer mediante un archivo de configuración, convenciones de ruta, entrada de usuario u otros mecanismos para que la especificación externa del código se vincule en tiempo de ejecución.*
 
-
     ``` 
-import '@fortawesome/fontawesome-free/css/all.css'
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
+    import '@fortawesome/fontawesome-free/css/all.css'
+    import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+    import Vue from 'vue';
+    import Vuetify from 'vuetify/lib';
 
-import colors from 'vuetify/lib/util/colors'
-Vue.use(Vuetify);
+    import colors from 'vuetify/lib/util/colors'
+    Vue.use(Vuetify);
 
-export default new Vuetify({
-    icons: {
-        iconfont: 'md' || 'fa' 
-      },
-      theme: {
-        themes: {
-            light: {
-                background: colors.grey.lighten2, // Not automatically applied
-              },
-          dark: {
-            background: colors.shades.white, // If not using lighten/darken, use base to return hex
+    export default new Vuetify({
+        icons: {
+            iconfont: 'md' || 'fa' 
           },
-        },
-      },
-});
-
+          theme: {
+            themes: {
+                light: {
+                    background: colors.grey.lighten2, // Not automatically applied
+                  },
+              dark: {
+                background: colors.shades.white, // If not using lighten/darken, use base to return hex
+              },
+            },
+          },
+    });
     ```
 ## 3. Dataspaces.
 
