@@ -51,26 +51,26 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     Usando la misma solución del estilo Pipeline (también conocido como funcional), agregué algunas declaraciones de tipo explícitas para cumplir mejor con las restricciones.
 
     ```  
-@task_blueprint.route('/actividad/add_actividad', methods=['POST'])
-@cross_origin()
-def create_task():
-    content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
-    return jsonify(content)
+    @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
+    @cross_origin()
+    def create_task():
+        content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
+        return jsonify(content)
 
-@task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
-@cross_origin()
-def delete_task():
-    return jsonify(model.delete_actividad(int(request.json['id_act'])))
+    @task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
+    @cross_origin()
+    def delete_task():
+        return jsonify(model.delete_actividad(int(request.json['id_act'])))
 
-@task_blueprint.route('/actividad/get_actividad', methods=['POST'])
-@cross_origin()
-def actividad():
-    return jsonify(model.get_actividad(int(request.json['id_act'])))
+    @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
+    @cross_origin()
+    def actividad():
+        return jsonify(model.get_actividad(int(request.json['id_act'])))
 
-@task_blueprint.route('/actividad/get_actividads', methods=['POST'])
-@cross_origin()
-def actividads():
-    return jsonify(model.get_actividads())
+    @task_blueprint.route('/actividad/get_actividads', methods=['POST'])
+    @cross_origin()
+    def actividads():
+        return jsonify(model.get_actividads())
 
     ```
 
