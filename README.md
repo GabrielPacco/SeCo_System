@@ -29,7 +29,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 
 ### Diagrama de Casos de Uso
 
-<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/diagrama_casos.png" width="550" height="550">
+<center><img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/diagrama_casos.png" width="550" height="550"></center>
 
 ### Diseño de Modelo de Datos 
 
