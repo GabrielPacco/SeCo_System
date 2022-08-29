@@ -205,7 +205,7 @@ export default {
       window.location.href = "https://www.instagram.com/kerito_17/";
     },
     setIGLlica() {
-      window.location.href = "https://www.instagram.com/diego_aquino_7w7/";
+      window.location.href = "https://www.instagram.com/kerito_17/";
     },
     setIGRonald() {
       window.location.href = "https://www.instagram.com/gabriel_pacco_/";
