@@ -302,23 +302,23 @@ Identar cada linea de codigo, o darle la sangria correspondiente, para tener un 
     ``` {js}
     @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
     @cross_origin()
-    def create_task():
+    def add_actividad():
         ...
         return jsonify(content)
 
     @task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
     @cross_origin()
-    def delete_task():
+    def delete_actividad():
         return jsonify(model.delete_actividad(int(request.json['ID_Actividad'])))
 
     @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
     @cross_origin()
-    def actividad():
+    def get_actividad():
         return jsonify(model.get_actividad(int(request.json['ID_Actividad'])))
 
     @task_blueprint.route('/actividad/get_actividads', methods=['POST'])
     @cross_origin()
-    def tasks():
+    def get_actividads():
         return jsonify(model.get_actividads())
     ```
 ## *7. Organización de Archivos y Carpetas.*
