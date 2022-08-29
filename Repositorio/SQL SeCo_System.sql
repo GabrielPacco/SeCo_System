@@ -9,7 +9,7 @@ CREATE TABLE  usuario
     email VARCHAR(50),
     PRIMARY KEY (id_user),
 );
-
++++++++++++
 CREATE TABLE invitado
 (
     id_inv INT NOT NULL AUTO_INCREMENT,
