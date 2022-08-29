@@ -327,7 +327,7 @@ En el concurso de clases se considera una interfaz, todos los métodos y propied
 
 En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
 
-Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita.
+Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita. En nuestro trabajo, encontramos diversidad de interfaces para poder interactuar con el usuario, tales como Admin.vue y User.vue. tanto User.uve es diferente a Admin.vue a pesar de que ambos son usuarios.
 
 ``` 
 
