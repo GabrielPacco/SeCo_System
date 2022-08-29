@@ -116,8 +116,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **b)** *Existencia de uno o más espacios de datos donde las unidades concurrentes almacenan y recuperan datos.* 
 - **c)** *No hay intercambios de datos directos entre las unidades concurrentes, excepto a través de los espacios de datos.*
 
-    ```
-    ```
+
  ## 4. Resful.
 REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:
 ### *Restricciones*
