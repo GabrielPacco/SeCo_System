@@ -5,6 +5,8 @@
     </v-content>
   </v-app>
 </template>
+<div>
+</div>
 
 <script>
 import Home from './components/Home';

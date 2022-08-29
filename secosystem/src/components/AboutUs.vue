@@ -1,11 +1,11 @@
 <template>
   <v-app id="inspire">
     <v-main class="light-blue darken-4">
-      <v-container spacing-playground pa-16>
+      <v-container pa-16 me-n4>
         <v-row>
             <v-col sm="8">
             <v-sheet
-              min-height="65vh"
+              min-height="800"
               rounded="lg"
               elevation="20"
             >
@@ -101,10 +101,102 @@
                     </v-btn>
                 </v-list-item>
               </v-sheet>
-              <v-img 
-              max-width="400"
-              src= "@/img/TrabajoEnGrupo.jpg">
-              </v-img>
+              <v-sheet
+                class="text-h5 text-center my-5 pa-1"
+                height="85"
+                width="400"
+                rounded
+                elevation="20"
+              >LLicawom
+                  <v-list-item>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-instagram </v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title link @click="setIGLlica"> Instagram</v-list-item-title>
+                    </v-btn>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-facebook</v-icon>
+                    </v-list-item-icon>
+              
+                    <v-list-item-title link @click="setFBLlica">Facebook</v-list-item-title>
+                    </v-btn>
+                </v-list-item>
+              </v-sheet>
+              <v-sheet
+                class="text-h5 text-center my-5 pa-1"
+                height="85"
+                width="400"
+                rounded
+                elevation="20"
+              >Ronald Gutierrez
+                  <v-list-item>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-instagram </v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title link @click="setIGRonald"> Instagram</v-list-item-title>
+                    </v-btn>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-facebook</v-icon>
+                    </v-list-item-icon>
+              
+                    <v-list-item-title link @click="setFBRonald">Facebook</v-list-item-title>
+                    </v-btn>
+                </v-list-item>
+              </v-sheet>
+              <v-sheet
+                class="text-h5 text-center my-5 pa-1"
+                height="85"
+                width="400"
+                rounded
+                elevation="20"
+              >Uberto Garcia
+                  <v-list-item>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-instagram </v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title link @click="setIGUberto"> Instagram</v-list-item-title>
+                    </v-btn>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-facebook</v-icon>
+                    </v-list-item-icon>
+              
+                    <v-list-item-title link @click="setFBUberto">Facebook</v-list-item-title>
+                    </v-btn>
+                </v-list-item>
+              </v-sheet>
+              <v-sheet
+                class="text-h5 text-center my-5 pa-1"
+                height="85"
+                width="400"
+                rounded
+                elevation="20"
+              >Fabrizio Mattos
+                  <v-list-item>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-instagram </v-icon>
+                    </v-list-item-icon>
+
+                    <v-list-item-title link @click="setIGFabrizio"> Instagram</v-list-item-title>
+                    </v-btn>
+                    <v-btn>
+                    <v-list-item-icon>
+                      <v-icon> mdi-facebook</v-icon>
+                    </v-list-item-icon>
+              
+                    <v-list-item-title link @click="setFBFabrizio">Facebook</v-list-item-title>
+                    </v-btn>
+                </v-list-item>
+              </v-sheet>
             </v-col>
         </v-row>
       </v-container>
@@ -137,6 +229,21 @@
       setIGErick(){
         window.location.href = "https://www.instagram.com/kerito_17/";
         },
+      setIGLlica(){
+        window.location.href = "https://www.instagram.com/diego_aquino_7w7/";
+        },
+      setIGRonald(){
+        window.location.href = "https://www.instagram.com/gabriel_pacco_/";
+        },
+      setIGUberto(){
+        window.location.href = "https://www.instagram.com/kerito_17/";
+        },
+      setIGFabrizio(){
+        window.location.href = "https://www.instagram.com/kerito_17/";
+        },
+
+///////////////////
+
       setFBDiego(){
         window.location.href = "https://www.facebook.com/Diego.AquinoQ/";
         },
@@ -146,6 +253,19 @@
       setFBErick(){
         window.location.href = "https://www.facebook.com/profile.php?id=100004004602419";
         },
+      setFBLlica(){
+        window.location.href = "https://www.facebook.com/profile.php?id=100009062691118";
+        },
+      setFBRonald(){
+        window.location.href = "https://www.facebook.com/ronaldjoaquin.gutierrezpastor.3";
+        },
+      setFBUberto(){
+        window.location.href = "https://www.facebook.com/profile.php?id=100004004602419";
+        },
+      setFBFabrizio(){
+        window.location.href = "https://www.facebook.com/profile.php?id=100004004602419";
+        },
+
 
     }
   }

@@ -4,7 +4,7 @@
       <v-container fill-height>
     
             <v-row
-              align="center"
+              align ="center"
               justify="center"
               no-gutters
             >
@@ -102,7 +102,7 @@
               >
                 Panel
               </v-btn>
-              
+
               <v-btn
                 color="white"
                 v-bind="attrs"

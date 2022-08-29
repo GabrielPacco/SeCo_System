@@ -249,3 +249,5 @@ def user():
 @cross_origin()
 def users():
     return jsonify(model.get_usuarios())
+    return jsonify(model.get_usuarios())
+

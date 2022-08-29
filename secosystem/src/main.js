@@ -7,9 +7,9 @@ Vue.config.productionTip = false
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
-import Home from './components/Home'
-import Admin from './components/Admin'
 import User from './components/User'
+import Admin from './components/Admin'
+import Home from './components/Home'
 import AboutUs from './components/AboutUs'
 
 const router = new VueRouter({
@@ -28,7 +28,8 @@ const router = new VueRouter({
       path: '/user',
       component: User
     },
-    {
+
+    { // About Us
       path: '/aboutus',
       component: AboutUs
     }
