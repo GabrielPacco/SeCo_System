@@ -7,27 +7,22 @@
 </template>
 <div id="building">
 </div>
-  
-<style>
-#building{
-background:url("../assets/image/BJ1.jpg");
-width:100%;			
-height:100%;			
-position:fixed;
-background-size:100% 100%;}
-</style>
+
+
 <script>
-
-
-export default {
-  name: 'App',
-
-  components: {
-    
-  },
-
-  data: () => ({
-    //
-  }),
-};
-</script>
+import Home from './components/Home';
+  //import Admin from './components/Admin';
+  //import User from './components/User';
+  import AboutUs from './components/AboutUs';
+  
+  export default {
+    name: 'App',
+  
+    components: {
+      Home,
+      //Admin,
+      //User,
+      AboutUs
+    },
+  };
+  </script>
