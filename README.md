@@ -148,7 +148,7 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 ## 5. Pipeline.
 Este estilo con programacion orientado a objetos es usado en las clases de backend/models ya que estas clases contienen funciones que retornan datos que no son compartidos entre otras funciones de la misma clase.
 ´´´
-	# Funcion para obtener una actividad por su ID
+	    /*Funcion para obtener una actividad por su ID*/
 	    def get_actividad(self, id_act):
 		params = {'id_act' : id_act}      
 		rv = self.mysql_pool.execute("SELECT * from actividad where id_act=%(id_act)s", params)                
