@@ -8,7 +8,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **b)** *Vuetify* 
 - **c)** *Lenguaje de Programación Python* 
 - **d)** *JavaScript* 
-- **e)** *Framework Flask* 
+- **e)** *Framework Flask*
  
 ## :label: Interfaz del Proyecto <br>
 	
