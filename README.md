@@ -501,7 +501,12 @@ Los componentes individuales no deben de ser una dependencia para operaciones ge
 Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.
 
 <img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550">
-
+# **Conceptos DDD**
+## Arquitectura en capas:
+#### Vista:
+#### Modelo:
+#### Controlador:
+#### Persistencia:
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
