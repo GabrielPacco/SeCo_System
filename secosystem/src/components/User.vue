@@ -28,7 +28,7 @@
                     <p class="text-caption"> {{tasks[0].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[0].enlace_reu}}
                       </v-btn>
@@ -62,9 +62,9 @@
                     <v-list-item-title><p> {{tasks[1].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[1].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[1].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[1].enlace_reu}}
                       </v-btn>
@@ -98,9 +98,9 @@
                     <v-list-item-title><p> {{tasks[2].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[2].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[2].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[2].enlace_reu}}
                       </v-btn>
@@ -137,9 +137,9 @@
                     <v-list-item-title><p> {{tasks[3].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[3].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[3].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[3].enlace_reu}}
                       </v-btn>
@@ -173,9 +173,9 @@
                     <v-list-item-title><p> {{tasks[4].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[4].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[4].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[4].enlace_reu}}
                       </v-btn>
@@ -191,6 +191,7 @@
           sm="4"
           >
             <v-card
+            align="center" 
               elevation="24"
               width="550"
               class="mx-auto"
@@ -208,9 +209,9 @@
                     <v-list-item-title><p> {{tasks[5].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[5].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[5].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[0].enlace_reu}}
                       </v-btn>
@@ -248,9 +249,9 @@
                     <v-list-item-title><p> {{tasks[6].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[6].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[6].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[6].enlace_reu}}
                       </v-btn>
@@ -284,9 +285,9 @@
                     <v-list-item-title><p> {{tasks[7].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[7].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[7].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[7].enlace_reu}}
                       </v-btn>
@@ -320,9 +321,9 @@
                     <v-list-item-title><p> {{tasks[8].nombre}} </p></v-list-item-title>
                     <v-list-item-subtitle>{{tasks[8].descripcion}} </v-list-item-subtitle>
                     <p class="text-caption"> {{tasks[8].fecha}}  </p>
-                    <v-card-title class="mx-15">
+                    <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/compra' })"
+                      link @click="$router.push({ path: '/' })"
                       >
                         Enlace: {{tasks[8].enlace_reu}}
                       </v-btn>
