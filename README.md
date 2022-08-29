@@ -499,14 +499,20 @@ En nuestro caso hemos agregado muchas extensiones, por ejemplo en Home.vue prime
 Los componentes individuales no deben de ser una dependencia para operaciones generales, esto es de lo que se trata el principio de inversión de dependencias, ambos deben depender de abstracciones, logrando un bajo acoplamiento entre las clases.
 
 Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.<br>
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550"><br>
 # **Conceptos DDD**
 ## Arquitectura en capas: 
-Consta en dividir la aplicación en capas, con la intención de que cada capa tenga un rol muy definido, como podría ser, una capa de presentación (UI), una capa de reglas de negocio (servicios) y una capa de acceso a datos (DAO), sin embargo, este estilo arquitectónico no define cuantas capas debe de tener la aplicación, sino más bien, se centra en la separación de la aplicación en capas (Aplica el principio Separación de preocupaciones (SoC)).
-#### Vista:
-#### Modelo:
-#### Controlador:
-#### Persistencia:
-<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550">
+Consta en dividir la aplicación en capas, con la intención de que cada capa tenga un rol muy definido, como podría ser, una capa de presentación (UI), una capa de reglas de negocio (servicios) y una capa de acceso a datos (DAO), sin embargo, este estilo arquitectónico no define cuantas capas debe de tener la aplicación, sino más bien, se centra en la separación de la aplicación en capas (Aplica el principio Separación de preocupaciones (SoC)).<br>
+### Separación de responsabilidades: 
+Permite la separación de preocupaciones (SoC), ya que cada capa tiene una sola responsabilidad.
+### Fácil de desarrollar: 
+Este estilo arquitectónico es especialmente fácil de implementar, además de que es muy conocido y una gran mayoría de las aplicaciones la utilizan.<br>
+### Fácil de probar: 
+Debido a que la aplicación construida por capas, es posible ir probando de forma individual cada capa, lo que permite probar por separada cada capa.<br>
+### Fácil de mantener: 
+Debido a que cada capa hace una tarea muy específica, es fácil detectar el origen de un bug para corregirlo, o simplemente se puede identificar donde se debe aplicar un cambio.<br>
+### Seguridad:
+La separación de capas permite el aislamiento de los servidores en subredes diferentes, lo que hace más difícil realizar ataques.
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
