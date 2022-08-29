@@ -10,17 +10,6 @@ CREATE TABLE  usuario
     PRIMARY KEY (id_user),
 );
 
-create table INVITADO
-(
-    id_inv INT NOT NULL AUTO_INCREMENT,
-    id_user INT,
-    universidad  VARCHAR(50),
-    carrera  VARCHAR(50),
-    grado  VARCHAR(20),
-    PRIMARY KEY (id_inv,IDE_USER),
-    FOREIGN KEY (id_user) REFERENCES usuario (id_user)
-);
-
 CREATE TABLE invitado
 (
     id_inv INT NOT NULL AUTO_INCREMENT,
