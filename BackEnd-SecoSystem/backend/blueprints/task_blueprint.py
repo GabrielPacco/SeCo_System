@@ -24,15 +24,16 @@ def create_task():
 def delete_task():
     return jsonify(model.delete_actividad(int(request.json['id_act'])))
 
+
 @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
 @cross_origin()
-def actividad():
+def get_actividad():
     return jsonify(model.get_actividad(int(request.json['id_act'])))
 
 @task_blueprint.route('/actividad/get_actividades', methods=['POST'])
 @cross_origin()
-def actividads():
-    return jsonify(model.get_actividads())
+def get_actividades():
+    return jsonify(model.get_actividades())
 
 
 ################# Administrador ################################
@@ -249,5 +250,5 @@ def user():
 @cross_origin()
 def users():
     return jsonify(model.get_usuarios())
-    return jsonify(model.get_usuarios())
+
 

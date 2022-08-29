@@ -6,7 +6,7 @@ class TaskModel:
 
 ################### Actividad ################################
     # Funcion para obtener una actividad por su ID
-    def get_actividad(self, id_act):    
+    def get_actividad(self, id_act):
         params = {'id_act' : id_act}      
         rv = self.mysql_pool.execute("SELECT * from actividad where id_act=%(id_act)s", params)                
         data = []
@@ -16,9 +16,9 @@ class TaskModel:
             data.append(content)
             content = {}
         return data
-
+    
     # Funcion para obtener todas las actividades
-    def get_actividads(self):
+    def get_actividades(self):
         rv = self.mysql_pool.execute("SELECT * from actividad")  
         data = []
         content = {}
@@ -112,7 +112,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_conc': result[0], 'participante': result[1], 'base': result[2], 'premio': result[3]}
+            content = {'id_conc': result[0], 'id_act': result[1], 'participante': result[2], 'base': result[3], 'premio': result[4]}
             data.append(content)
             content = {}
         return data
@@ -123,7 +123,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_conc': result[0], 'participante': result[1], 'base': result[2], 'premio': result[3]}
+            content = {'id_conc': result[0], 'id_act': result[1], 'participante': result[2], 'base': result[3], 'premio': result[4]}
             data.append(content)
             content = {}
         return data
@@ -215,7 +215,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_edi': result[0], 'anho': result[1], 'nombre': result[2]}
+            content = {'id_edi': result[0], 'id_act': result[1], 'anho': result[2], 'nombre': result[3]}
             data.append(content)
             content = {}
         return data
@@ -226,7 +226,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_edi': result[0], 'anho': result[1], 'nombre': result[2]}
+            content = {'id_edi': result[0], 'id_act': result[1], 'anho': result[2], 'nombre': result[3]}
             data.append(content)
             content = {}
         return data
@@ -244,14 +244,6 @@ class TaskModel:
         data = {'id_edi': cursor.lastrowid, 'anho': anho, 'nombre': nombre}
         return data
     
-    # Funcion para eliminar una edición
-    def delete_edicion(self, id_edi):
-        params = {'id_edi' : id_edi}      
-        query = """delete from edicion where id_edi = %(id_edi)s"""    
-        self.mysql_pool.execute(query, params, commit=True)   
-
-        data = {'result': 1}
-        return data
 
 ################### Invitado ################################
 
@@ -312,7 +304,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_pan': result[0], 'topico': result[1]}
+            content = {'id_pon': result[0], 'id_act': result[1], 'topico': result[2]}
             data.append(content)
             content = {}
         return data
@@ -323,7 +315,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_pan': result[0], 'topico': result[1]}
+            content = {'id_pon': result[0], 'id_act': result[1], 'topico': result[2]}
             data.append(content)
             content = {}
         return data
@@ -360,7 +352,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_pon': result[0], 'topico': result[1]}
+            content = {'id_pon': result[0], 'id_act': result[1], 'topico': result[2]}
             data.append(content)
             content = {}
         return data
@@ -371,7 +363,7 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id_pon': result[0], 'topico': result[1]}
+            content = {'id_pon': result[0], 'id_act': result[1], 'topico': result[2]}
             data.append(content)
             content = {}
         return data
@@ -500,4 +492,6 @@ if __name__ == "__main__":
 
     #print(tm.get_actividad(1))
     #print(tm.get_actividads())
+    print(tm.delete_usuario(67))
+    print(tm.get_usuarios())
     #print(tm.create_actividad('prueba 10', 'desde python'))
