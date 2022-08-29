@@ -1,5 +1,14 @@
 CREATE DATABASE BBDDSECOSISTEM;
 USE  BBDDSECOSISTEM;
+Create table USUARIO
+(
+    id_user INT,
+    nombre VARCHAR(50),
+    contrasenia VARCHAR(50),
+    email VARCHAR(50),
+    PRIMARY KEY (id_user),
+);
+
 
 CREATE TABLE  usuario
 (
