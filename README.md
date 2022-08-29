@@ -3,7 +3,13 @@
 
 ## :label: Propósito del Proyecto
 El  proyecto desarrollado es referido a "La semana de computación " en la escuela profesional de Ciencia de la Computación, la cual tiene como proposito proporcionar información a los usuarios que quieren saber mas de la escuela, asi como de poder participar ya sea como invitados, ponentes, o simplemente en los concursos que ofrece la escuela.<br>
-
+## :label: Tecnologias Usadas <br>
+- **a)** *Vue* 
+- **b)** *Vuetify* 
+- **c)** *Lenguaje de Programación Python* 
+- **d)** *JavaScript* 
+- **e)** *Framework Flask*
+ 
 ## :label: Interfaz del Proyecto <br>
 	
 <center><img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Interfaz.gif" width="800" height="545"></center>
@@ -56,26 +62,29 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     Usando la misma solución del estilo Pipeline (también conocido como funcional), agregué algunas declaraciones de tipo explícitas para cumplir mejor con las restricciones.
 
     ```  
-    @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
-    @cross_origin()
-    def create_task():
-        content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
-        return jsonify(content)
+    ################# Actividad ################################
 
-    @task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
-    @cross_origin()
-    def delete_task():
-        return jsonify(model.delete_actividad(int(request.json['id_act'])))
+	@task_blueprint.route('/actividad/add_actividad', methods=['POST'])
+	@cross_origin()
+	def create_task():
+	    content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
+	    return jsonify(content)
 
-    @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
-    @cross_origin()
-    def actividad():
-        return jsonify(model.get_actividad(int(request.json['id_act'])))
+	@task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
+	@cross_origin()
+	def delete_task():
+	    return jsonify(model.delete_actividad(int(request.json['id_act'])))
 
-    @task_blueprint.route('/actividad/get_actividads', methods=['POST'])
-    @cross_origin()
-    def actividads():
-        return jsonify(model.get_actividads())
+
+	@task_blueprint.route('/actividad/get_actividad', methods=['POST'])
+	@cross_origin()
+	def get_actividad():
+	    return jsonify(model.get_actividad(int(request.json['id_act'])))
+
+	@task_blueprint.route('/actividad/get_actividades', methods=['POST'])
+	@cross_origin()
+	def get_actividades():
+	    return jsonify(model.get_actividades())
 
     ```
 
@@ -181,10 +190,10 @@ def get_actividad(self, id_act):
 ´´´
 # **Concepto CRUD aplicado**
 CRUD hace referencia a un acrónimo en el que se reúnen las primeras letras de las cuatro operaciones fundamentales de aplicaciones persistentes en sistemas de bases de datos:
-## Create (Crear registros)
-## Read bzw. Retrieve (Leer registros)
-## Update (Actualizar registros)
-## Delete bzw. Destroy (Borrar registros)
+### Create (Crear registros)
+### Read bzw. Retrieve (Leer registros)
+### Update (Actualizar registros)
+### Delete bzw. Destroy (Borrar registros)
 En pocas palabras, CRUD resume las funciones requeridas por un usuario para crear y gestionar datos. Varios procesos de gestión de datos están basados en CRUD, en los que dichas operaciones están específicamente adaptadas a los requisitos del sistema y de usuario, ya sea para la gestión de bases de datos o para el uso de aplicaciones.
 # **Prácticas de Código Legible**
 
@@ -539,12 +548,12 @@ El lenguaje ubicuo es el concepto de definir un lenguaje (hablado y escrito) que
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
-### 🔩COLABORADORES 🔩
+### 🔩COLABORADORES🔩
 
-- [x] Erick Jesús Perez Chipa
-- [x] Gabriel Pacco Huaraca
-- [x] Ronald Gutierrez Arratia
-- [x] Uberto Garcia Caceres
-- [x] Fabrizio Miguel Mattos Cahui
-- [x] Albert Daniel Llica Alvarez
-- [x] Diego Josue Aquino Quispe
+- [x] Erick Jesús Perez Chipa: Base de Datos, Arquitectura de Software y Frontend(About us) 
+- [x] Gabriel Pacco Huaraca: Backend y Hosting
+- [x] Ronald Gutierrez Arratia: Frontend (Home), Arquitectura de Software y Base de datos 
+- [x] Uberto Garcia Caceres: Readme , Trello
+- [x] Fabrizio Miguel Mattos Cahui:  Readme, Requisitos de Software y Base de Datos
+- [x] Albert Daniel Llica Alvarez: Frontend (Ponencia Panel),  Requisitos de Software, Base de Datos e Imagenes
+- [x] Diego Josue Aquino Quispe: Frontend 
