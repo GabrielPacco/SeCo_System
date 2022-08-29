@@ -435,18 +435,16 @@ Este problema surge, principalmente, cuando una subclase hereda métodos de una 
 
 <img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen1.jpg" width="550" height="550">
 
-## *4) El Principio de Substitución de Liskov (LSP)*
 
-### *“Las clases derivadas deben ser sustituibles por sus clases base”*
-
-Las clases menores pueden ser sustituidas por superclases, siguiendo la substitución creada por Barbara Liskov para evitar fallas en el desarrollo de software. Esto significa que los objetos deben poder ser reemplazados por instancias de sus subtipos sin alterar el correcto funcionamiento del sistema o lo que es lo mismo: si en un programa utilizamos cierta clase, deberíamos poder usar cualquiera de sus subclases sin interferir en la funcionalidad del programa.  
-
-
-## *5) El Principio de Inversión de Dependencias (DIP)*
+## *4) El Principio de Inversión de Dependencias (DIP)*
 
 ### *“Depende de abstracciones, no de concreciones”*
 
 Los componentes individuales no deben de ser una dependencia para operaciones generales, esto es de lo que se trata el principio de inversión de dependencias, ambos deben depender de abstracciones, logrando un bajo acoplamiento entre las clases.
+
+Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.
+
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550">
 
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
