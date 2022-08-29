@@ -498,16 +498,15 @@ En nuestro caso hemos agregado muchas extensiones, por ejemplo en Home.vue prime
 
 Los componentes individuales no deben de ser una dependencia para operaciones generales, esto es de lo que se trata el principio de inversión de dependencias, ambos deben depender de abstracciones, logrando un bajo acoplamiento entre las clases.
 
-Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.
-
-<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550">
-# **Estilos de Programación**
+Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.<br>
+# **Conceptos DDD**
 ## Arquitectura en capas: 
 Consta en dividir la aplicación en capas, con la intención de que cada capa tenga un rol muy definido, como podría ser, una capa de presentación (UI), una capa de reglas de negocio (servicios) y una capa de acceso a datos (DAO), sin embargo, este estilo arquitectónico no define cuantas capas debe de tener la aplicación, sino más bien, se centra en la separación de la aplicación en capas (Aplica el principio Separación de preocupaciones (SoC)).
 #### Vista:
 #### Modelo:
 #### Controlador:
 #### Persistencia:
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550">
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
