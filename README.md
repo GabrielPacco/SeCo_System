@@ -539,12 +539,12 @@ El lenguaje ubicuo es el concepto de definir un lenguaje (hablado y escrito) que
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
-### 🔩COLABORADORES 🔩
+### 🔩COLABORADORES🔩
 
-- [x] Erick Jesús Perez Chipa
-- [x] Gabriel Pacco Huaraca
-- [x] Ronald Gutierrez Arratia
-- [x] Uberto Garcia Caceres
-- [x] Fabrizio Miguel Mattos Cahui
-- [x] Albert Daniel Llica Alvarez
-- [x] Diego Josue Aquino Quispe
+- [x] Erick Jesús Perez Chipa: Base de Datos, Arquitectura de Software y Frontend(About us) 
+- [x] Gabriel Pacco Huaraca: Backend y Hosting
+- [x] Ronald Gutierrez Arratia: Frontend (Home), Arquitectura de Software y Base de datos 
+- [x] Uberto Garcia Caceres: Readme , Trello
+- [x] Fabrizio Miguel Mattos Cahui:  Readme, Requisitos de Software y Base de Datos
+- [x] Albert Daniel Llica Alvarez: Frontend (Ponencia Panel),  Requisitos de Software, Base de Datos e Imagenes
+- [x] Diego Josue Aquino Quispe: Frontend 
