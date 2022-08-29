@@ -294,26 +294,28 @@ Identar cada linea de codigo, o darle la sangria correspondiente, para tener un 
     ```
 ## *6. Los nombres de las funciones realizan lo mencionado*
     ``` {js}
-    @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
-    @cross_origin()
-    def add_actividad():
-        ...
-        return jsonify(content)
+        # Funcion para agregar un usuario
+    def add_usuario(self, nombre, contrasenia, email):
+        params = {
+            'nombre' : nombre,
+            'constrasenia' : contrasenia,
+            'email' : email
+        }  
+        query = """insert into usuario (nombre, contrasenia, email)
+            values (%(nombre)s, %(constrasenia)s, %(email)s)"""    
+        cursor = self.mysql_pool.execute(query, params, commit=True)   
 
-    @task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
-    @cross_origin()
-    def delete_actividad():
-        return jsonify(model.delete_actividad(int(request.json['ID_Actividad'])))
+        data = {'id_user': cursor.lastrowid, 'nombre': nombre, 'constrasenia': contrasenia, 'email': email}
+        return data
+    
+    # Funcion para eliminar un usuario
+    def delete_usuario(self, id_user):
+        params = {'id_user' : id_user}      
+        query = """delete from usuario where id_user = %(id_user)s"""    
+        self.mysql_pool.execute(query, params, commit=True)   
 
-    @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
-    @cross_origin()
-    def get_actividad():
-        return jsonify(model.get_actividad(int(request.json['ID_Actividad'])))
-
-    @task_blueprint.route('/actividad/get_actividads', methods=['POST'])
-    @cross_origin()
-    def get_actividads():
-        return jsonify(model.get_actividads())
+        data = {'result': 1}
+        return data
     ```
 ## *7. Organización de Archivos y Carpetas.*
 
