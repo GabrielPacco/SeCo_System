@@ -6,7 +6,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 ## :label: Tecnologias Usadas <br>
 - **a)** *Vue* 
 - **b)** *Vuetify* 
-- **c)** *Python* 
+- **c)** *Lenguaje de Programación Python* 
 - **d)** *JavaScript* 
 
 ## :label: Interfaz del Proyecto <br>
