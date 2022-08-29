@@ -28,7 +28,7 @@
                     <p class="text-caption"> {{tasks[0].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[0].enlace_reu}}
                       </v-btn>
@@ -51,10 +51,10 @@
             >
               <v-system-bar lights-out></v-system-bar>
               <v-img
-                lazy-src="https://live.staticflickr.com/65535/52318980073_d8ff0cc5a6_h.jpg"
+                lazy-src="https://live.staticflickr.com/65535/52320142909_9f4cb9a6fa_z.jpg"
                 max-height="400"
                 max-width="450"
-                src="https://live.staticflickr.com/65535/52318980073_d8ff0cc5a6_h.jpg"
+                src="https://live.staticflickr.com/65535/52320142909_9f4cb9a6fa_z.jpg"
                 ></v-img>
               <v-list two-line>
                 <v-list-item>
@@ -64,7 +64,7 @@
                     <p class="text-caption"> {{tasks[1].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[1].enlace_reu}}
                       </v-btn>
@@ -87,10 +87,10 @@
             >
               <v-system-bar lights-out></v-system-bar>
               <v-img
-                lazy-src="https://live.staticflickr.com/65535/52319093479_b512ff2cce_n.jpg"
+                lazy-src="https://live.staticflickr.com/65535/52320159650_48eaf1641d_c.jpg"
                 max-height="400"
                 max-width="450"
-                src="https://live.staticflickr.com/65535/52319093479_b512ff2cce_n.jpg"
+                src="https://live.staticflickr.com/65535/52320159650_48eaf1641d_c.jpg"
                 ></v-img>
               <v-list two-line>
                 <v-list-item>
@@ -100,7 +100,7 @@
                     <p class="text-caption"> {{tasks[2].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[2].enlace_reu}}
                       </v-btn>
@@ -139,7 +139,7 @@
                     <p class="text-caption"> {{tasks[3].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[3].enlace_reu}}
                       </v-btn>
@@ -175,7 +175,7 @@
                     <p class="text-caption"> {{tasks[4].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[4].enlace_reu}}
                       </v-btn>
@@ -211,7 +211,7 @@
                     <p class="text-caption"> {{tasks[5].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[0].enlace_reu}}
                       </v-btn>
@@ -251,7 +251,8 @@
                     <p class="text-caption"> {{tasks[6].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
+
                       >
                         Enlace: {{tasks[6].enlace_reu}}
                       </v-btn>
@@ -287,7 +288,7 @@
                     <p class="text-caption"> {{tasks[7].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[7].enlace_reu}}
                       </v-btn>
@@ -323,7 +324,7 @@
                     <p class="text-caption"> {{tasks[8].fecha}}  </p>
                     <v-card-title class="mx-5">
                       <v-btn
-                      link @click="$router.push({ path: '/' })"
+                      link @click="setmeet"
                       >
                         Enlace: {{tasks[8].enlace_reu}}
                       </v-btn>
@@ -354,7 +355,9 @@
         }
       },
       methods:{
-  
+        setmeet(){
+          window.location.href = "https://meet.google.com/ydt-sxvb-uwg";
+        }
       },
       created(){ 
           axios.post(this.postURL + '/actividad/get_actividades')

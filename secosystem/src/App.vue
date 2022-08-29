@@ -13,12 +13,12 @@
         width = "230"
         src="@/img/logobarra.png"
         alt="secosystem"
-        link @click="$router.push({ path: '/user' })"
+        link @click="$router.push({ path: '/' })"
       >
       &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
         <v-btn
           elevation="2"
-          link @click="$router.push({ path: '/' })"
+          link @click="$router.push({ path: '/login' })"
         >
         Ingresa aquí
         </v-btn>

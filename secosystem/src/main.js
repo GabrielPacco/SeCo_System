@@ -21,7 +21,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     {
-      path: '/',
+      path: '/login',
       component: Home
     },
     {
@@ -29,7 +29,7 @@ const router = new VueRouter({
       component: Admin
     },
     {
-      path: '/user',
+      path: '/',
       component: User
     },
 
