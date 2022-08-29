@@ -518,7 +518,7 @@ Debido a que cada capa hace una tarea muy específica, es fácil detectar el ori
 La separación de capas permite el aislamiento de los servidores en subredes diferentes, lo que hace más difícil realizar ataques.<br>
 ## Lenguaje Ubiquo: 
 El lenguaje ubicuo es el concepto de definir un lenguaje (hablado y escrito) que se usa por igual entre los desarrolladores y los expertos en dominios para evitar incoherencias y falta de comunicación debido a problemas de traducción y malentendidos. Verá la misma terminología en el código, las conversaciones entre cualquier miembro del equipo, las especificaciones funcionales, etc.
-´´´
+	´´´
 
 	def add_concurso(self, participante, base, premio):
 		params = {
@@ -532,7 +532,7 @@ El lenguaje ubicuo es el concepto de definir un lenguaje (hablado y escrito) que
 
 		data = {'id_conc': cursor.lastrowid, 'participante': participante, 'base': base, 'premio': premio}
 		return data
-´´´
+	´´´
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
