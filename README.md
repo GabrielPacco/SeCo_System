@@ -429,9 +429,7 @@ En nuestro caso hemos agregado muchas extensiones, por ejemplo en Home.vue prime
 
 ### *“Muchas interfaces específicas del cliente son mejores que una interfaz de propósito general”*
 
-En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
-
-En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
+En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
 
 Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita. En nuestro trabajo, encontramos diversidad de interfaces para poder interactuar con el usuario, tales como Admin.vue y User.vue. tanto User.uve es diferente a Admin.vue a pesar de que ambos son usuarios, O tro ejemplo que tenemos es como tanto el inicio como el registro de usuario es muy diferente.
 
@@ -439,18 +437,16 @@ Este problema surge, principalmente, cuando una subclase hereda métodos de una 
 
 ## *4) El Principio de Substitución de Liskov (LSP)*
 
-### *“Las subclases pueden ser sustiuidas por la superclase”*
+### *“Las clases derivadas deben ser sustituibles por sus clases base”*
 
-Las clases menores pueden ser sustituidas por superclases, siguiendo la substitución de Liskov
+Las clases menores pueden ser sustituidas por superclases, siguiendo la substitución creada por Barbara Liskov para evitar fallas en el desarrollo de software. Esto significa que los objetos deben poder ser reemplazados por instancias de sus subtipos sin alterar el correcto funcionamiento del sistema o lo que es lo mismo: si en un programa utilizamos cierta clase, deberíamos poder usar cualquiera de sus subclases sin interferir en la funcionalidad del programa.  
 
 
 ## *5) El Principio de Inversión de Dependencias (DIP)*
 
-### *“Los módulos de alto nivel no deben tener dependencia de los de bajo nivel”*
+### *“Depende de abstracciones, no de concreciones”*
 
-En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
-
-En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
+Los componentes individuales no deben de ser una dependencia para operaciones generales, esto es de lo que se trata el principio de inversión de dependencias, ambos deben depender de abstracciones, logrando un bajo acoplamiento entre las clases.
 
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
