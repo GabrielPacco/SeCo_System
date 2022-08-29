@@ -62,29 +62,30 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     Usando la misma solución del estilo Pipeline (también conocido como funcional), agregué algunas declaraciones de tipo explícitas para cumplir mejor con las restricciones.
 
     ```  
-    ################# Actividad ################################
+    ################### Concurso ################################
 
-	@task_blueprint.route('/actividad/add_actividad', methods=['POST'])
-	@cross_origin()
-	def create_task():
-	    content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
-	    return jsonify(content)
+    # Funcion para obtener un concurso por su ID
+    def get_concurso(self, id_conc):
+        params = {'id_conc' : id_conc}      
+        rv = self.mysql_pool.execute("SELECT * from concurso where id_conc=%(id_conc)s", params)                
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_conc': result[0], 'id_act': result[1], 'participante': result[2], 'base': result[3], 'premio': result[4]}
+            data.append(content)
+            content = {}
+        return data
 
-	@task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
-	@cross_origin()
-	def delete_task():
-	    return jsonify(model.delete_actividad(int(request.json['id_act'])))
-
-
-	@task_blueprint.route('/actividad/get_actividad', methods=['POST'])
-	@cross_origin()
-	def get_actividad():
-	    return jsonify(model.get_actividad(int(request.json['id_act'])))
-
-	@task_blueprint.route('/actividad/get_actividades', methods=['POST'])
-	@cross_origin()
-	def get_actividades():
-	    return jsonify(model.get_actividades())
+    # Funcion para obtener todos los concursos
+    def get_concursos(self):
+        rv = self.mysql_pool.execute("SELECT * from concurso")  
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_conc': result[0], 'id_act': result[1], 'participante': result[2], 'base': result[3], 'premio': result[4]}
+            data.append(content)
+            content = {}
+        return data
 
     ```
 
