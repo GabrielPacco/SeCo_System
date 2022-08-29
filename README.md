@@ -270,7 +270,7 @@ Identar cada linea de codigo, o darle la sangria correspondiente, para tener un 
     ```
 ## *7. Organización de Archivos y Carpetas.*
 
-<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen1.PNG" width="550" height="550">
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen3.PNG" width="550" height="550">
 
 ## *8. Evitar codigo redundante.* <br>
 
