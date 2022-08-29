@@ -88,12 +88,10 @@
                             v-on:click='deleteTask(task)'
                             @click="messages--"
                           >
-    
                             <v-icon dark>
                               mdi-delete
                             </v-icon>
                           </v-btn>
-    
                           </td>
                     </tr>
                   </tbody>
@@ -148,7 +146,7 @@
                 this.newTask = {};
             }
         },
-    
+        
         created(){ 
             axios.post(this.postURL + '/ponencia/get_ponencias')
                 .then(res => { this.tasks = res.data; })
