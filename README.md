@@ -329,9 +329,7 @@ En este sentido, los principios de IS nos dicen que una clase solo debe tener la
 
 Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita. En nuestro trabajo, encontramos diversidad de interfaces para poder interactuar con el usuario, tales como Admin.vue y User.vue. tanto User.uve es diferente a Admin.vue a pesar de que ambos son usuarios.
 
-``` 
-
-```
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen1.jpg" width="550" height="550">
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
