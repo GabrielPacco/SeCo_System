@@ -148,7 +148,9 @@ REST es un estilo para aplicaciones interactivas basadas en red que subyace en l
 ## 5. Pipeline.
 Este estilo con programacion orientado a objetos es usado en las clases de backend/models ya que estas clases contienen funciones que retornan datos que no son compartidos entre otras funciones de la misma clase.
 ´´´
-def get_actividad(self, id_act):    
+################### Actividad ################################
+    # Funcion para obtener una actividad por su ID
+    def get_actividad(self, id_act):
         params = {'id_act' : id_act}      
         rv = self.mysql_pool.execute("SELECT * from actividad where id_act=%(id_act)s", params)                
         data = []
@@ -158,9 +160,9 @@ def get_actividad(self, id_act):
             data.append(content)
             content = {}
         return data
-
+    
     # Funcion para obtener todas las actividades
-    def get_actividads(self):
+    def get_actividades(self):
         rv = self.mysql_pool.execute("SELECT * from actividad")  
         data = []
         content = {}
@@ -168,24 +170,6 @@ def get_actividad(self, id_act):
             content = {'id_act': result[0], 'nombre': result[1], 'descripcion': result[2], 'fecha': result[3], 'hora_inicio': result[4], 'hora_fin': result[5], 'estado': result[6], 'enlace_reu': result[7]}
             data.append(content)
             content = {}
-        return data
-
-    # Funcion para agregar una actividad
-    def add_actividad(self, nombre, descripcion, fecha, hora_inicio, hora_fin, estado, enlace_reu):
-        params = {
-            'nombre' : nombre,
-            'descripcion' : descripcion,
-            'fecha' : fecha,
-            'hora_inicio' : hora_inicio,
-            'hora_fin' : hora_fin,
-            'estado' : estado,
-            'enlace_reu' : enlace_reu
-        }  
-        query = """insert into actividad (nombre, descripcion, fecha, hora_inicio, hora_fin, estado, enlace_reu)
-            values (%(nombre)s, %(descripcion)s, %(fecha)s, %(hora_inicio)s, %(hora_fin)s, %(estado)s, %(enlace_reu)s)"""    
-        cursor = self.mysql_pool.execute(query, params, commit=True)   
-
-        data = {'id_act': cursor.lastrowid, 'nombre': nombre, 'descripcion': descripcion, 'fecha': fecha, 'hora_inicio': hora_inicio, 'hora_fin': hora_fin, 'estado': estado, 'enlace_reu': enlace_reu}
         return data
 ´´´
 # **Concepto CRUD aplicado**
