@@ -47,7 +47,7 @@ CREATE TABLE actividad
     nombre VARCHAR(30),
     descripcion TEXT,
     fecha DATE,
-    hora_inicio TIME,
+    hora_inicio VARCHAR(20),
     hora_fin VARCHAR(20),
     estado VARCHAR(30),
     enlace_reu TEXT,
