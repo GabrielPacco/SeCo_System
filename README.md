@@ -8,7 +8,8 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **b)** *Vuetify* 
 - **c)** *Lenguaje de Programación Python* 
 - **d)** *JavaScript* 
-
+- **e)** *Framework Flask* 
+ 
 ## :label: Interfaz del Proyecto <br>
 	
 <center><img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Interfaz.gif" width="800" height="545"></center>
