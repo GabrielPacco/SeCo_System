@@ -185,7 +185,7 @@ En pocas palabras, CRUD resume las funciones requeridas por un usuario para crea
 
 ## *1. Agrupación de código.*
     La mayoría de las veces, ciertas tareas requieren unas pocas líneas de código. Es una buena idea mantener estas tareas dentro de bloques de código separados, con algunos espacios entre ellos.
-    ``` 
+    ```   
     ################### Actividad ################################
     # Funcion para obtener una actividad por su ID
     def get_actividad(self, ID_Actividad):    
