@@ -264,7 +264,7 @@ En otras palabras, cada componente de su código (en general una clase, pero tam
 
 Con demasiada frecuencia, ve una pieza de código que se encarga de todo un proceso a la vez. Es decir, una función que carga datos, los modifica y los grafica, todo antes de devolver su resultado.
 
-Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2, …, nx] y calculamos algunas funciones matemáticas para esta lista. Por ejemplo, calcule la media, la mediana, etc.
+Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2, …, nx] y calculamos algunas funciones matemáticas para esta lista. Por ejemplo, calcule la media, la mediana, etc. En nuestro caso, tenemos a nuestro conector de la base de datos que nos ayuda con la conexión MYSQL, ha sufrido cambios pero solo con una razón en cada uno de ellos, mejorar la interacción con MySQL.
 
 
 ``` 
@@ -313,10 +313,116 @@ En otras palabras:No debería necesitar modificar el código que ya ha escrito p
 
 Esto no significa que no pueda cambiar su código cuando las premisas del código necesiten ser modificadas, sino que si necesita agregar nuevas funciones similares a la presente, no debería necesitar cambiar otras partes del código.
 
-Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. Si quisiéramos agregar una nueva funcionalidad, por ejemplo, calcular la mediana, deberíamos haber creado una nueva función de método y agregar su invocación a "principal". Eso habría agregado una extensión pero también modificado el principal.
+Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. Si quisiéramos agregar una nueva funcionalidad, por ejemplo, calcular la mediana, deberíamos haber creado una nueva función de método y agregar su invocación a "principal". Eso habría agregado una extensión pero también modificado el principal. 
+
+En nuestro caso hemos agregado muchas extensiones, por ejemplo en Home.vue primero fue agregado el inicio de sesión, lo que nos permitia pasar al siguiente endpoint, pero luego añadimos la extensión de registrarse, sin eliminar ningún elemento anterior hecho.
+
 
 ``` 
+                        <h1>Iniciar sesión en SeCo_System</h1>
+                        <h4 class="text-center mt-4">Ingresa tu correo y contraseña</h4>
+                        <v-form>
+                          <v-text-field
+                            label="Correo"
+                            name="Email"
+                            prepend-icon="email"
+                            type="text"
+                            color="#ff0000"
+                          />
 
+                          <v-text-field
+                            id="password"
+                            label="Contraseña"
+                            name="password"
+                            prepend-icon="lock"
+                            type="password"
+                            color="#ff0000"
+                          />
+                        </v-form>
+                        <h3 class="text-center mt-4">¿Ovidaste tu contraseña?</h3>
+                      </v-card-text>
+                      <div class="text-center mt-3">
+                        <v-btn
+                          color="blue darken-4"
+                          v-bind="attrs"
+                          v-on="on"
+                          dark
+                          rounded
+                          link @click="$router.push({ path: '/admin' })"
+                        >
+                          INGRESAR
+                        </v-btn>
+                      </div>
+                    </v-col>
+                    <v-col cols="12" md="4" class="blue darken-4" height="40">
+                      <v-card-text class="white--text mt-12">
+                        <h1 class="text-center display-1">¡Hola Amigo!</h1>
+                        <h5
+                          class="text-center"
+                        >Bienvenido a la semana de la computación, ingresa tus datos para resgistrarte</h5>
+                      </v-card-text>
+                      <div class="text-center">
+                        <v-btn rounded color="white" @click="step++">CREAR CUENTA</v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </v-window-item>
+                <v-window-item :value="2">
+                  <v-row class="fill-height">
+                    <v-col cols="12" md="4" class="blue darken-4">
+                      <v-card-text class="white--text mt-12">
+                        <h1 class="text-center display-1">¡Hola! de nuevo</h1>
+                        <h5
+                          class="text-center"
+                        >Para ingresa al apartado principal, ingresar tus datos</h5>
+                      </v-card-text>
+                      <div class="text-center">
+                        <v-btn rounded  color="white" @click="step--">INGRESAR</v-btn>
+                      </div>
+                    </v-col>
+
+                    <v-col cols="12" md="8">
+                      <v-card-text class="mt-12">
+                        <h1 class="text-center display-2 teal--blue text--accent-3">Crear Cuenta</h1>
+
+                        <h4 class="text-center mt-4">Ingresa tu correo y contraseña</h4>
+                        <v-form>
+                          <v-text-field
+                            label="Nombre"
+                            name="Name"
+                            prepend-icon="person"
+                            type="text"
+                            color="#ff0000"
+                          />
+                          <v-text-field
+                            label="Correo"
+                            name="Email"
+                            prepend-icon="email"
+                            type="text"
+                            color="#ff0000"
+                          />
+
+                          <v-text-field
+                            id="password"
+                            label="Contraseña"
+                            name="password"
+                            prepend-icon="lock"
+                            type="password"
+                            color="#ff0000"
+                          />
+                        </v-form>
+                      </v-card-text>
+                      <div class="text-center mt-n5">
+                        <v-btn
+                          color="blue darken-4"
+                          v-bind="attrs"
+                          v-on="on"
+                          dark
+                          rounded
+                          link @click="$router.push({ path: '/admin' })"
+                        >
+                          CREAR CUENTA
+                        </v-btn>
 ```
 
 ## *3) El Principio de Segregación de Interfaz (ISP)*
@@ -327,9 +433,25 @@ En el concurso de clases se considera una interfaz, todos los métodos y propied
 
 En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
 
-Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita. En nuestro trabajo, encontramos diversidad de interfaces para poder interactuar con el usuario, tales como Admin.vue y User.vue. tanto User.uve es diferente a Admin.vue a pesar de que ambos son usuarios.
+Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita. En nuestro trabajo, encontramos diversidad de interfaces para poder interactuar con el usuario, tales como Admin.vue y User.vue. tanto User.uve es diferente a Admin.vue a pesar de que ambos son usuarios, O tro ejemplo que tenemos es como tanto el inicio como el registro de usuario es muy diferente.
 
 <img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen1.jpg" width="550" height="550">
+
+## *4) El Principio de Substitución de Liskov (LSP)*
+
+### *“Las subclases pueden ser sustiuidas por la superclase”*
+
+Las clases menores pueden ser sustituidas por superclases, siguiendo la substitución de Liskov
+
+
+## *5) El Principio de Inversión de Dependencias (DIP)*
+
+### *“Los módulos de alto nivel no deben tener dependencia de los de bajo nivel”*
+
+En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
+
+En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
+
 ### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
 https://trello.com/b/FxYv1sZo/seco
 
