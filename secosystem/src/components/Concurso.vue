@@ -2,8 +2,8 @@
     <v-app>
       <v-main class="light-blue darken-4">
       <v-container fill-height>
-    
-            <v-row
+        <v-row
+              align ="center"
               justify="center"
               no-gutters
             >
@@ -16,66 +16,39 @@
                     v-bind="attrs"
                     v-on="on"
                   >
-                    AGREGAR UNA ACTIVIDAD
+                    Agregar Concursos
                   </v-btn>
-    
+                  &zwnj; &zwnj;
                 </template>
                 <v-card>
                   <br>
                   <v-card-title>
-                    <span class="text-h5 mx-auto">AGREGAR UNA ACTIVIDAD</span>
+                    <span class="text-h5 mx-auto">CONCURSOS</span>
                   </v-card-title>
                   <v-card-text class="text-h6 text-center">
+
+                    <v-text-field
+                      class="mx-10"
+                      v-model='newTask.participante'
+                      :rules="nameRules"
+                      label="Participante"
+                      required
+                    ></v-text-field>
+                    <v-text-field
+                      class="mx-10"
+                      v-model='newTask.base'
+                      :rules="nameRules"
+                      label="Base"
+                      required
+                    ></v-text-field>
+                    <v-text-field
+                      class="mx-10"
+                      v-model='newTask.premio'
+                      :rules="nameRules"
+                      label="Premio"
+                      required
+                    ></v-text-field>
     
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.Nombre'
-                      :rules="nameRules"
-                      label="Nombre"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.Descripcion'
-                      :rules="nameRules"
-                      label="Descripcion"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.Fecha'
-                      :rules="nameRules"
-                      label="Fecha"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.HoraIn'
-                      :rules="nameRules"
-                      label="Hora de inicio"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.HoraFin'
-                      :rules="nameRules"
-                      label="Hora de finalizacion"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.Estado'
-                      :rules="nameRules"
-                      label="Estado"
-                      required
-                    ></v-text-field>
-                    <v-text-field
-                      class="mx-10"
-                      v-model='newTask2.Enlace'
-                      :rules="nameRules"
-                      label="Enlace a la reunion"
-                      required
-                    ></v-text-field>
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
@@ -90,41 +63,13 @@
                   <br>
                 </v-card>
               </v-dialog>
-              &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
               <v-btn
                 color="white"
                 v-bind="attrs"
                 v-on="on"
-                link @click="$router.push({ path: '/concurso' })"
+                link @click="$router.push({ path: '/admin' })"
               >
-                Concurso
-              </v-btn>
-              &zwnj; &zwnj;
-              <v-btn
-                color="white"
-                v-bind="attrs"
-                v-on="on"
-                link @click="$router.push({ path: '/edicion' })"
-              >
-                Edicion
-              </v-btn>
-              &zwnj; &zwnj;
-              <v-btn
-                color="white"
-                v-bind="attrs"
-                v-on="on"
-                link @click="$router.push({ path: '/panel' })"
-              >
-                Panel
-              </v-btn>
-              &zwnj; &zwnj;
-              <v-btn
-                color="white"
-                v-bind="attrs"
-                v-on="on"
-                link @click="$router.push({ path: '/ponencia' })"
-              >
-                Ponencia
+                Volver a actividades
               </v-btn>
             </v-row>
     
@@ -136,28 +81,16 @@
                   <thead>
                     <tr>
                       <th class="text-center">
-                        Id
+                        ID
                       </th>
                       <th class="text-center">
-                        Nombre
+                        Participante
                       </th>
                       <th class="text-center">
-                        Descripcion
+                        Base
                       </th>
                       <th class="text-center">
-                        Fecha
-                      </th>
-                      <th class="text-center">
-                        Hora de inicio
-                      </th>
-                      <th class="text-center">
-                        Hora de finalización
-                      </th>
-                      <th class="text-center">
-                        Estado
-                      </th>
-                      <th class="text-center">
-                        Enlace a la reunión
+                        Premio
                       </th>
                     </tr>
                   </thead>
@@ -165,14 +98,10 @@
                     <tr
                       v-for="task in tasks" :key="task"
                     >
-                        <td>{{ task.id_act }} </td>
-                        <td>{{ task.nombre }} </td>
-                        <td>{{ task.descripcion }} </td>
-                        <td>{{ task.fecha }} </td>
-                        <td>{{ task.hora_inicio }} </td>
-                        <td>{{ task.hora_fin }} </td>
-                        <td>{{ task.estado }} </td>
-                        <td>{{ task.enlace_reu }} </td>
+                        <td>{{ task.id_conc }} </td>
+                        <td>{{ task.participante }} </td>
+                        <td>{{ task.base }} </td>
+                        <td>{{ task.premio }} </td>
                         <td><v-btn
                             small
                             color="error"
@@ -181,6 +110,7 @@
                             v-on:click='deleteTask(task)'
                             @click="messages--"
                           >
+    
                             <v-icon dark>
                               mdi-delete
                             </v-icon>
@@ -192,7 +122,7 @@
                 </template>
               </v-simple-table>
               </v-card>
-            </v-layout>
+          </v-layout>
       </v-container>
       </v-main>
     </v-app>
@@ -206,7 +136,6 @@
             return { 
                 tasks: [],
                 newTask: {},
-                newTask2: {},
                 postURL: 'https://backendsecosystem.herokuapp.com',
                 config_request: {
                     'Content-Type': 'application/json',
@@ -216,7 +145,7 @@
         },
         methods:{
             addTask(){ 
-                axios.post(this.postURL + '/actividad/add_actividad', this.newTask2, this.config_request)
+                axios.post(this.postURL + '/concurso/add_concurso', this.newTask, this.config_request)
                     .then(res => {                                         
                         this.tasks.push(res.data);
                         console.log(res.data)        ;
@@ -225,13 +154,13 @@
                         console.log(error)
                     });
     
-                this.newTask2 = {};
+                this.newTask = {};
             },
-
+    
             deleteTask(task){                      
-                axios.post(this.postURL + '/actividad/delete_actividad', {CUI: task.ID_Actividad}, this.config_request)
+                axios.post(this.postURL + '/concurso/delete_concurso', {ID_Concurso: task.id_conc}, this.config_request)
                     .then(() => {                      
-                        this.tasks.splice(this.tasks.indexOf(task), 1);                  
+                        this.tasks.splice(this.tasks.indexOf(task), 1);                    
                     })
                     .catch((error) => {
                         console.log(error)
@@ -240,15 +169,13 @@
             reset(){                      
                 this.newTask = {};
             }
-    
         },
     
         created(){ 
-            axios.post(this.postURL + '/actividad/get_actividades')
+            axios.post(this.postURL + '/concurso/get_concursos')
                 .then(res => { this.tasks = res.data; })
                 .catch((error) => { console.log(error) })
-        },
+        }
     
     }
     </script>
-    

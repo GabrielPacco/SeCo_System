@@ -5,7 +5,7 @@
         <v-row>
             <v-col sm="8">
             <v-sheet
-              min-height="800"
+              min-height="785"
               rounded="lg"
               elevation="20"
             >
@@ -14,8 +14,9 @@
             </p>
 
             <v-sheet class="d-block text-center mx-auto mb-9 pa-12 text-h5" width="700"><br>
-            Somos un grupo de estudiante de la Universidad Nacional de San Agustín de Arequipa que busca ayudar en  gaaaaaaaaaaaaaaaaaaaaaaa
-            </v-sheet>
+              Somos un grupo de programadores, estudiantes de la Universidad Nacional de San Agustín de Arequipa que busca aprender cada día más y buscar resolver diferentes problemas usando la programación.
+En esta ocasión, el proyecto desarrollado es referido a "La semana de computación " en la escuela profesional de Ciencia de la Computación, la cual tiene como propósito proporcionar información a los usuarios que quieren saber mas de la escuela, así como de poder participar ya sea como invitados, ponentes, o simplemente en los concursos que ofrece la escuela.
+          </v-sheet>
 
             </v-sheet>
             </v-col>
@@ -107,7 +108,7 @@
                 width="400"
                 rounded
                 elevation="20"
-              >LLicawom
+              >Albert Llica
                   <v-list-item>
                     <v-btn>
                     <v-list-item-icon>
@@ -198,6 +199,15 @@
                 </v-list-item>
               </v-sheet>
             </v-col>
+        </v-row>
+        <v-row align-xl>
+          <v-img
+              lazy-src="@/img/carpincho.png"
+              max-height="1800"
+              max-width="1500"
+              src="@/img/carpincho.png"
+
+            ></v-img>
         </v-row>
       </v-container>
     </v-main>
