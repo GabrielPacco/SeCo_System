@@ -5,24 +5,21 @@
     </v-content>
   </v-app>
 </template>
-<div id="building">
-</div>
-
 
 <script>
 import Home from './components/Home';
-  //import Admin from './components/Admin';
-  //import User from './components/User';
-  import AboutUs from './components/AboutUs';
+  import Admin from './components/Admin';
+  import User from './components/User';
+import AboutUs from './components/AboutUs';
+
+export default {
+  name: 'App',
   
-  export default {
-    name: 'App',
-  
-    components: {
-      Home,
-      //Admin,
-      //User,
-      AboutUs
-    },
-  };
-  </script>
+  Components: {
+    Home,
+    Admin,
+    User,
+    AboutUs
+  },
+};
+</script>
