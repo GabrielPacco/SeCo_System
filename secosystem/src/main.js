@@ -9,8 +9,6 @@ Vue.use(VueRouter);
 
 
 import Home from './components/Home'
-import Admin from './components/Admin'
-import User from './components/User'
 import AboutUs from './components/AboutUs'
 
 const router = new VueRouter({
@@ -20,14 +18,6 @@ const router = new VueRouter({
     { // primero muestra el componente Inicio
       path: '/',
       component: Home
-    },
-    {
-      path: '/admin',
-      component: Admin
-    },
-    {
-      path: '/user',
-      component: User
     },
     { // About Us
       path: '/aboutus',
