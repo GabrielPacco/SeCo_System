@@ -187,10 +187,10 @@ def get_actividad(self, id_act):
 ´´´
 # **Concepto CRUD aplicado**
 CRUD hace referencia a un acrónimo en el que se reúnen las primeras letras de las cuatro operaciones fundamentales de aplicaciones persistentes en sistemas de bases de datos:
-## Create (Crear registros)
-## Read bzw. Retrieve (Leer registros)
-## Update (Actualizar registros)
-## Delete bzw. Destroy (Borrar registros)
+### Create (Crear registros)
+### Read bzw. Retrieve (Leer registros)
+### Update (Actualizar registros)
+### Delete bzw. Destroy (Borrar registros)
 En pocas palabras, CRUD resume las funciones requeridas por un usuario para crear y gestionar datos. Varios procesos de gestión de datos están basados en CRUD, en los que dichas operaciones están específicamente adaptadas a los requisitos del sistema y de usuario, ya sea para la gestión de bases de datos o para el uso de aplicaciones.
 # **Prácticas de Código Legible**
 
