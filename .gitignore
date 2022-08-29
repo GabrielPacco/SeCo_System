@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+secosystem/package.json
+secosystem/package-lock.json
+secosystem/package-lock.json
+secosystem/package.json
