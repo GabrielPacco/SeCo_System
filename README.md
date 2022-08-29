@@ -1,14 +1,44 @@
 
 #  INGENIERÍA DE SOFTWARE I -PROYECTO SeCo_System :desktop_computer: 
+
 ## :label: Propósito del Proyecto
-El  proyecto desarrollado es referido a "La semana de computación " en la escuela profesional de Ciencia de la Computación, la cual tiene como proposito proporcionar información a los usuarios que quieren saber mas de la escuela, asi como de poder participar ya sea como invitados, ponentes, o simplemente en los concursos que ofrece la escuela.
+El  proyecto desarrollado es referido a "La semana de computación " en la escuela profesional de Ciencia de la Computación, la cual tiene como proposito proporcionar información a los usuarios que quieren saber mas de la escuela, asi como de poder participar ya sea como invitados, ponentes, o simplemente en los concursos que ofrece la escuela.<br>
+
+## :label: Interfaz del Proyecto <br>
+	
+<center><img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Interfaz.gif" width="800" height="545"></center>
+
 ## :red_circle: Desarrollo
+
+### Funcionalidades
+:scroll:  Registrar cuenta: El usuario debe registrar una cuenta. Registra sus datos personales y de acceso. <br>
+:scroll: Iniciar sesión: El actor debe ingresar con los datos de inicio de sesión de su cuenta para poder acceder. <br>
+:scroll: Inscribir participación: El usuario debe inscribirse a un evento. Registra el evento al que quiere participar. <br>
+:scroll: Confirmar actividad: El usuario debe elegir una actividad programada en el cronograma. <br>
+:scroll: Visualizar menú de eventos: El usuario debe visualizar el menú de eventos. Abre una página con el menú de los eventos. <br>
+:scroll: Visualizar edición: El usuario debe visualizar los eventos programados. <br>
+:scroll: Visualizar programa: El usuario debe visualizar el calendario de actividades. Se muestra el cronograma de actividades, cada actividad tendrá un nombre, su expositor y la hora. <br>
+:scroll: Visualizar actividad (track): El usuario debe visualizar las actividades programadas. Se muestra el cronograma e información de las actividades.
+:scroll: Buscar actividad: El usuario podrá realizar búsquedas a través de filtros. <br>
+:scroll: Contactar organización: El usuario podrá visualizar información de contacto y podrá enviar mensaje a los organizadores. <br>
+:scroll: Gestionar cuenta: El administrador podrá dirigir las cuentas de los usuarios. <br>
+:scroll: Gestionar actividad (track): El administrador puede gestionar una actividad, esto incluye programar una nueva actividad, modificarla o finalizarla. <br>
+:scroll: Añadir actividad: El administrador debe ser capaz de añadir actividades a un evento en la página. <br>
+:scroll: Eliminar actividad: El administrador puede eliminar una actividad de un evento. El evento seleccionado se desecha del calendario. <br>
+:scroll: Modificar Actividad: El administrador puede modificar una actividad, pudiendo editar sus datos y actualizarlos en el calendario. <br>
+
 ### Diagrama de Casos de Uso
-![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Main.png) 
+
+<center><img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/diagrama_casos.png" width="550" height="550"></center>
+
 ### Diseño de Modelo de Datos 
-![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png)
+
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/modelo.png" width="550" height="550">
+
 ### Diseño de Arquitectura
-![image](https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png)
+
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/Arquitectura.png" width="550" height="550">
+
 
 
 # **Estilos de Programación**
@@ -25,27 +55,28 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 
     Usando la misma solución del estilo Pipeline (también conocido como funcional), agregué algunas declaraciones de tipo explícitas para cumplir mejor con las restricciones.
 
-    ``` 
+    ```  
     @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
     @cross_origin()
     def create_task():
-        content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fechaInicio'], request.json['fechaFin'], request.json['enlaceReunion'], request.json['isProtocolar'], request.json['isPonencia'], request.json['isPanel'], request.json['isConcurso'], request.json['bases']) 
+        content = model.add_actividad(request.json['nombre'], request.json['descripcion'], request.json['fecha'], request.json['hora_inicio'], request.json['hora_fin'], request.json['estado'], request.json['enlace_reu']) 
         return jsonify(content)
 
     @task_blueprint.route('/actividad/delete_actividad', methods=['POST'])
     @cross_origin()
     def delete_task():
-        return jsonify(model.delete_actividad(int(request.json['ID_Actividad'])))
+        return jsonify(model.delete_actividad(int(request.json['id_act'])))
 
     @task_blueprint.route('/actividad/get_actividad', methods=['POST'])
     @cross_origin()
     def actividad():
-        return jsonify(model.get_actividad(int(request.json['ID_Actividad'])))
+        return jsonify(model.get_actividad(int(request.json['id_act'])))
 
     @task_blueprint.route('/actividad/get_actividads', methods=['POST'])
     @cross_origin()
-    def tasks():
+    def actividads():
         return jsonify(model.get_actividads())
+
     ```
 
 ## 2. Plugins.
@@ -57,10 +88,31 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **c)** *El programa principal usa funciones/objetos de los paquetes cargados dinámicamente, sin saber qué implementaciones exactas se usarán. Se pueden usar nuevas implementaciones sin tener que adaptar o recompilar el programa principal.*
 - **d)** *Especificación externa de qué paquetes cargar. Esto se puede hacer mediante un archivo de configuración, convenciones de ruta, entrada de usuario u otros mecanismos para que la especificación externa del código se vincule en tiempo de ejecución.*
 
-
     ``` 
+    import '@fortawesome/fontawesome-free/css/all.css'
+    import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+    import Vue from 'vue';
+    import Vuetify from 'vuetify/lib';
 
+    import colors from 'vuetify/lib/util/colors'
+    Vue.use(Vuetify);
+
+    export default new Vuetify({
+        icons: {
+            iconfont: 'md' || 'fa' 
+          },
+          theme: {
+            themes: {
+                light: {
+                    background: colors.grey.lighten2, // Not automatically applied
+                  },
+              dark: {
+                background: colors.shades.white, // If not using lighten/darken, use base to return hex
+              },
+            },
+          },
+    });
     ```
 ## 3. Dataspaces.
 
@@ -69,11 +121,71 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
 - **b)** *Existencia de uno o más espacios de datos donde las unidades concurrentes almacenan y recuperan datos.* 
 - **c)** *No hay intercambios de datos directos entre las unidades concurrentes, excepto a través de los espacios de datos.*
 
-    ```
 
+ ## 4. Resful.
+REST es un estilo para aplicaciones interactivas basadas en red que subyace en la Web. El ejemplo aquí no pasa por la red, pero conserva las principales restricciones de REST, que son:
+### *Restricciones*
+- **a)** *Interactivo: extremo a extremo entre un agente activo (por ejemplo, una persona) y un backend.* 
+- **b)** *Separación entre Cliente (interfaz de usuario) y Servidor (almacenamiento de datos).* 
+- **c)** *Sin estado, como en cliente--servidor sin estado: cada solicitud del cliente al servidor debe contener toda la información necesaria para que el servidor atienda la solicitud. El servidor no puede almacenar el contexto de la interacción. El estado de la sesión está en el cliente.*
+- **d)** Interfaz uniforme: recursos que se crean y recuperan, identificadores de recursos y representación hipermedia que es el motor del estado de la aplicación*
 
-    ```
+```
+    ################# Carpetas separadas del Cliente y Servidor ################################
+    Donde el controlador del proyecto se encuentra en la carpe Backend SeCo System
+    Parte de las vistas en secosystem/srs/views
 
+```
+## 5. Pipeline.
+Este estilo con programacion orientado a objetos es usado en las clases de backend/models ya que estas clases contienen funciones que retornan datos que no son compartidos entre otras funciones de la misma clase.
+´´´
+def get_actividad(self, id_act):    
+        params = {'id_act' : id_act}      
+        rv = self.mysql_pool.execute("SELECT * from actividad where id_act=%(id_act)s", params)                
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_act': result[0], 'nombre': result[1], 'descripcion': result[2], 'fecha': result[3], 'hora_inicio': result[4], 'hora_fin': result[5], 'estado': result[6], 'enlace_reu': result[7]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para obtener todas las actividades
+    def get_actividads(self):
+        rv = self.mysql_pool.execute("SELECT * from actividad")  
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_act': result[0], 'nombre': result[1], 'descripcion': result[2], 'fecha': result[3], 'hora_inicio': result[4], 'hora_fin': result[5], 'estado': result[6], 'enlace_reu': result[7]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para agregar una actividad
+    def add_actividad(self, nombre, descripcion, fecha, hora_inicio, hora_fin, estado, enlace_reu):
+        params = {
+            'nombre' : nombre,
+            'descripcion' : descripcion,
+            'fecha' : fecha,
+            'hora_inicio' : hora_inicio,
+            'hora_fin' : hora_fin,
+            'estado' : estado,
+            'enlace_reu' : enlace_reu
+        }  
+        query = """insert into actividad (nombre, descripcion, fecha, hora_inicio, hora_fin, estado, enlace_reu)
+            values (%(nombre)s, %(descripcion)s, %(fecha)s, %(hora_inicio)s, %(hora_fin)s, %(estado)s, %(enlace_reu)s)"""    
+        cursor = self.mysql_pool.execute(query, params, commit=True)   
+
+        data = {'id_act': cursor.lastrowid, 'nombre': nombre, 'descripcion': descripcion, 'fecha': fecha, 'hora_inicio': hora_inicio, 'hora_fin': hora_fin, 'estado': estado, 'enlace_reu': enlace_reu}
+        return data
+´´´
+# **Concepto CRUD aplicado**
+CRUD hace referencia a un acrónimo en el que se reúnen las primeras letras de las cuatro operaciones fundamentales de aplicaciones persistentes en sistemas de bases de datos:
+## Create (Crear registros)
+## Read bzw. Retrieve (Leer registros)
+## Update (Actualizar registros)
+## Delete bzw. Destroy (Borrar registros)
+En pocas palabras, CRUD resume las funciones requeridas por un usuario para crear y gestionar datos. Varios procesos de gestión de datos están basados en CRUD, en los que dichas operaciones están específicamente adaptadas a los requisitos del sistema y de usuario, ya sea para la gestión de bases de datos o para el uso de aplicaciones.
 # **Prácticas de Código Legible**
 
 ## *1. Agrupación de código.*
@@ -118,7 +230,28 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     add_Concurso();
     add_Edicion();
     ```
-## *3. Poner en mayúscula las palabras especiales de SQL*
+## *3. Identacion correspondiente* <br>
+Identar cada linea de codigo, o darle la sangria correspondiente, para tener un codigo mas ordenado y facil de comprender.
+```
+<template>
+  <v-app id="inspire">
+    <v-content>
+
+      <v-container class="fill-height" fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="12" sm="8" md="8">
+            <v-card class="elevation-12" fab color="#ccffff" outline>
+              <v-window v-model="step" >
+                <v-window-item :value="1">
+                  <v-row>
+                    <v-col cols="12" md="8">
+                      <!--<img src="src/assets/logo.png" height="50px" width="550px"/> -->
+                      <v-card-text class="mt-12">
+                        <h1
+                          class="text-center display-5 teal--blue text--blue" 
+                        >Iniciar sesión en SeCo_System</h1>
+```
+## *4. Poner en mayúscula las palabras especiales de SQL*
     ```{js}
     CREATE TABLE  usuario
     (
@@ -141,7 +274,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
         FOREIGN KEY (id_user) REFERENCES usuario (id_user)
     );
     ```
-## *4. Cada función realiza solo realiza una tarea*
+## *5. Cada función realiza solo realiza una tarea*
     ```{js}
     # Funcion para obtener una actividad por su ID
     def get_actividad(self, ID_Actividad):    
@@ -165,7 +298,7 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
         ...
     return data
     ```
-## *5. Los nombres de las funciones realizan lo mencionado*
+## *6. Los nombres de las funciones realizan lo mencionado*
     ``` {js}
     @task_blueprint.route('/actividad/add_actividad', methods=['POST'])
     @cross_origin()
@@ -188,10 +321,13 @@ El  proyecto desarrollado es referido a "La semana de computación " en la escue
     def tasks():
         return jsonify(model.get_actividads())
     ```
-## *6. Organización de Archivos y Carpetas.*
+## *7. Organización de Archivos y Carpetas.*
 
-![image](https://live.staticflickr.com/65535/52300101188_80a37989c3_n.jpg)
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen4.PNG">
 
+## *8. Evitar codigo redundante.* <br>
+
+No declarar variables o comentarios que son obvios o que pueda sobrecargar el codigo.
 # **Principios SOLID**
 ## *1) El principio de responsabilidad única (SRP)*
 
@@ -201,7 +337,7 @@ En otras palabras, cada componente de su código (en general una clase, pero tam
 
 Con demasiada frecuencia, ve una pieza de código que se encarga de todo un proceso a la vez. Es decir, una función que carga datos, los modifica y los grafica, todo antes de devolver su resultado.
 
-Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2, …, nx] y calculamos algunas funciones matemáticas para esta lista. Por ejemplo, calcule la media, la mediana, etc.
+Tomemos un ejemplo más simple, donde tenemos una lista de números L = [n1, n2, …, nx] y calculamos algunas funciones matemáticas para esta lista. Por ejemplo, calcule la media, la mediana, etc. En nuestro caso, tenemos a nuestro conector de la base de datos que nos ayuda con la conexión MYSQL, ha sufrido cambios pero solo con una razón en cada uno de ellos, mejorar la interacción con MySQL.
 
 
 ``` 
@@ -250,22 +386,148 @@ En otras palabras:No debería necesitar modificar el código que ya ha escrito p
 
 Esto no significa que no pueda cambiar su código cuando las premisas del código necesiten ser modificadas, sino que si necesita agregar nuevas funciones similares a la presente, no debería necesitar cambiar otras partes del código.
 
-Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. Si quisiéramos agregar una nueva funcionalidad, por ejemplo, calcular la mediana, deberíamos haber creado una nueva función de método y agregar su invocación a "principal". Eso habría agregado una extensión pero también modificado el principal.
+Para aclarar este punto vamos a referirnos al ejemplo que vimos anteriormente. Si quisiéramos agregar una nueva funcionalidad, por ejemplo, calcular la mediana, deberíamos haber creado una nueva función de método y agregar su invocación a "principal". Eso habría agregado una extensión pero también modificado el principal. 
+
+En nuestro caso hemos agregado muchas extensiones, por ejemplo en Home.vue primero fue agregado el inicio de sesión, lo que nos permitia pasar al siguiente endpoint, pero luego añadimos la extensión de registrarse, sin eliminar ningún elemento anterior hecho.
+
 
 ``` 
+                        <h1>Iniciar sesión en SeCo_System</h1>
+                        <h4 class="text-center mt-4">Ingresa tu correo y contraseña</h4>
+                        <v-form>
+                          <v-text-field
+                            label="Correo"
+                            name="Email"
+                            prepend-icon="email"
+                            type="text"
+                            color="#ff0000"
+                          />
 
+                          <v-text-field
+                            id="password"
+                            label="Contraseña"
+                            name="password"
+                            prepend-icon="lock"
+                            type="password"
+                            color="#ff0000"
+                          />
+                        </v-form>
+                        <h3 class="text-center mt-4">¿Ovidaste tu contraseña?</h3>
+                      </v-card-text>
+                      <div class="text-center mt-3">
+                        <v-btn
+                          color="blue darken-4"
+                          v-bind="attrs"
+                          v-on="on"
+                          dark
+                          rounded
+                          link @click="$router.push({ path: '/admin' })"
+                        >
+                          INGRESAR
+                        </v-btn>
+                      </div>
+                    </v-col>
+                    <v-col cols="12" md="4" class="blue darken-4" height="40">
+                      <v-card-text class="white--text mt-12">
+                        <h1 class="text-center display-1">¡Hola Amigo!</h1>
+                        <h5
+                          class="text-center"
+                        >Bienvenido a la semana de la computación, ingresa tus datos para resgistrarte</h5>
+                      </v-card-text>
+                      <div class="text-center">
+                        <v-btn rounded color="white" @click="step++">CREAR CUENTA</v-btn>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </v-window-item>
+                <v-window-item :value="2">
+                  <v-row class="fill-height">
+                    <v-col cols="12" md="4" class="blue darken-4">
+                      <v-card-text class="white--text mt-12">
+                        <h1 class="text-center display-1">¡Hola! de nuevo</h1>
+                        <h5
+                          class="text-center"
+                        >Para ingresa al apartado principal, ingresar tus datos</h5>
+                      </v-card-text>
+                      <div class="text-center">
+                        <v-btn rounded  color="white" @click="step--">INGRESAR</v-btn>
+                      </div>
+                    </v-col>
+
+                    <v-col cols="12" md="8">
+                      <v-card-text class="mt-12">
+                        <h1 class="text-center display-2 teal--blue text--accent-3">Crear Cuenta</h1>
+
+                        <h4 class="text-center mt-4">Ingresa tu correo y contraseña</h4>
+                        <v-form>
+                          <v-text-field
+                            label="Nombre"
+                            name="Name"
+                            prepend-icon="person"
+                            type="text"
+                            color="#ff0000"
+                          />
+                          <v-text-field
+                            label="Correo"
+                            name="Email"
+                            prepend-icon="email"
+                            type="text"
+                            color="#ff0000"
+                          />
+
+                          <v-text-field
+                            id="password"
+                            label="Contraseña"
+                            name="password"
+                            prepend-icon="lock"
+                            type="password"
+                            color="#ff0000"
+                          />
+                        </v-form>
+                      </v-card-text>
+                      <div class="text-center mt-n5">
+                        <v-btn
+                          color="blue darken-4"
+                          v-bind="attrs"
+                          v-on="on"
+                          dark
+                          rounded
+                          link @click="$router.push({ path: '/admin' })"
+                        >
+                          CREAR CUENTA
+                        </v-btn>
 ```
 
-## *3) El Principio de Segregación de Interfaz (ISP)*
+## *3) El Principio de Inversión de Dependencias (DIP)*
 
-### *“Muchas interfaces específicas del cliente son mejores que una interfaz de propósito general”*
+### *“Depende de abstracciones, no de concreciones”*
 
-En el concurso de clases se considera una interfaz, todos los métodos y propiedades “ expuestos ”, es decir, todo aquello con lo que un usuario puede interactuar que pertenece a esa clase.
+Los componentes individuales no deben de ser una dependencia para operaciones generales, esto es de lo que se trata el principio de inversión de dependencias, ambos deben depender de abstracciones, logrando un bajo acoplamiento entre las clases.
 
-En este sentido, los principios de IS nos dicen que una clase solo debe tener la interfaz necesaria (SRP) y evitar métodos que no funcionarán o que no tienen por qué ser parte de esa clase.
+Dicho esto, tenemos como abstracciones en nuestros archivos .vue tales como el registro o inicio de sesión de un usuario, su inscripción en algún concurso, la creación de varios concursos con respecto al administrador, etc.<br>
+<img src="https://github.com/GabrielPacco/SeCo_System/blob/main/Recursos/imagen2.PNG" width="550" height="550"><br>
+# **Conceptos DDD**
+## Arquitectura en capas: 
+Consta en dividir la aplicación en capas, con la intención de que cada capa tenga un rol muy definido, como podría ser, una capa de presentación (UI), una capa de reglas de negocio (servicios) y una capa de acceso a datos (DAO), sin embargo, este estilo arquitectónico no define cuantas capas debe de tener la aplicación, sino más bien, se centra en la separación de la aplicación en capas (Aplica el principio Separación de preocupaciones (SoC)).<br>
+### Separación de responsabilidades: 
+Permite la separación de preocupaciones (SoC), ya que cada capa tiene una sola responsabilidad.
+### Fácil de desarrollar: 
+Este estilo arquitectónico es especialmente fácil de implementar, además de que es muy conocido y una gran mayoría de las aplicaciones la utilizan.<br>
+### Fácil de probar: 
+Debido a que la aplicación construida por capas, es posible ir probando de forma individual cada capa, lo que permite probar por separada cada capa.<br>
+### Fácil de mantener: 
+Debido a que cada capa hace una tarea muy específica, es fácil detectar el origen de un bug para corregirlo, o simplemente se puede identificar donde se debe aplicar un cambio.<br>
+### Seguridad:
+La separación de capas permite el aislamiento de los servidores en subredes diferentes, lo que hace más difícil realizar ataques.
+### 🔩Planificación de tareas de implementación en la herramienta TRELLO 🔩
+https://trello.com/b/FxYv1sZo/seco
 
-Este problema surge, principalmente, cuando una subclase hereda métodos de una clase base que no necesita.
+### 🔩COLABORADORES 🔩
 
-``` 
-
-```
+- [x] Erick Jesús Perez Chipa
+- [x] Gabriel Pacco Huaraca
+- [x] Ronald Gutierrez Arratia
+- [x] Uberto Garcia Caceres
+- [x] Fabrizio Miguel Mattos Cahui
+- [x] Albert Daniel Llica Alvarez
+- [x] Diego Josue Aquino Quispe
